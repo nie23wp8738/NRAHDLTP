@@ -1,0 +1,42 @@
+Package: NRAHDLTP
+Type: Package
+Title: Location Tests for High-Dimensional Problems Including Normal-Reference Approach
+Version: 0.1.1
+Authors@R: c(person("Shuqi", "Luo", role = c("aut"),
+                     email = "nie23.ls4909@e.ntu.edu.sg"),
+              person("Pengfei", "Wang", role = c("aut", "cre"),
+                      email = "nie23.wp8738@e.ntu.edu.sg"),                        
+              person("Tianming", "Zhu", role = c("aut"),
+                     email = "tianming.zhu@nie.edu.sg"),
+              person("Bu", "Zhou", role = c("aut"),
+                     email = "bu.zhou@u.nus.edu"))
+Author: Shuqi Luo [aut],
+  Pengfei Wang [aut, cre],
+  Tianming Zhu [aut],
+  Bu Zhou [aut]
+Maintainer: Pengfei Wang <nie23.wp8738@e.ntu.edu.sg>
+Description: Provides various classical tests and latest normal-reference approach tests for comparing high-dimensional mean vectors in two and k sample populations.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+LinkingTo: 
+    Rcpp,
+    RcppArmadillo
+Imports: 
+    expm,
+    Rcpp,
+    readr,
+    stats
+Suggests: 
+    devtools,
+    dplyr,
+    knitr,
+    rmarkdown,
+    spelling,
+    testthat (>= 3.0.0),
+    tidyr
+Depends: 
+    R (>= 2.10)
+LazyData: true
+Language: en-US
