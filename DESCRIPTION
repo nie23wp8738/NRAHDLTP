@@ -2,16 +2,16 @@ Package: NRAHDLTP
 Type: Package
 Title: Location Tests for High-Dimensional Problems Including Normal-Reference Approach
 Version: 0.1.1
-Authors@R: c(person("Shuqi", "Luo", role = c("aut"),
+Authors@R: c(person("Pengfei", "Wang", role = c("aut", "cre"),
+                      email = "nie23.wp8738@e.ntu.edu.sg"), 
+              person("Shuqi", "Luo", role = c("aut"),
                      email = "nie23.ls4909@e.ntu.edu.sg"),
-              person("Pengfei", "Wang", role = c("aut", "cre"),
-                      email = "nie23.wp8738@e.ntu.edu.sg"),                        
               person("Tianming", "Zhu", role = c("aut"),
                      email = "tianming.zhu@nie.edu.sg"),
               person("Bu", "Zhou", role = c("aut"),
                      email = "bu.zhou@u.nus.edu"))
-Author: Shuqi Luo [aut],
-  Pengfei Wang [aut, cre],
+Author: Pengfei Wang [aut, cre],
+  Shuqi Luo [aut],
   Tianming Zhu [aut],
   Bu Zhou [aut]
 Maintainer: Pengfei Wang <nie23.wp8738@e.ntu.edu.sg>
