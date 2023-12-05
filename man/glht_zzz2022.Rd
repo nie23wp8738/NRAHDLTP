@@ -60,5 +60,5 @@ glht_zzz2022(Y,X,C)
 
 }
 \references{
-Zhu, T., Zhang, L., & Zhang, J. T. (2022). Hypothesis Testing in High-Dimensional Linear Regression: a Normal-Reference Scale-Invariant Test. Statistica Sinica, 32, 1857-1879.
+\insertRef{Zhu_2023}{NRAHDLTP}
 }

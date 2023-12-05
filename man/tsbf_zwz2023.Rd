@@ -61,5 +61,5 @@ y2 <- Gamma2 \%*\% Z2 + mu2\%*\%(rep(1,n2))
 tsbf_zwz2023(y1, y2)
 }
 \references{
-Zhu, T., Wang, P., & Zhang, J. T. (2023). Two-sample Behrens--Fisher problems for high-dimensional data: a normal reference F-type test. arXiv preprint arXiv:2212.13372.
+\insertRef{zhu2022two}{NRAHDLTP}
 }

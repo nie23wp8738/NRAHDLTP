@@ -20,7 +20,8 @@
 #'
 #
 
-#' @references Bai, Z., & Saranadasa, H. (1996). Effect of high dimension: by an example of a two sample problem. Statistica Sinica, 311-329.
+#' @references
+#' \insertRef{bai1996effect}{NRAHDLTP}
 #'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{

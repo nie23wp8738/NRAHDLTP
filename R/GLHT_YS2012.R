@@ -23,7 +23,9 @@
 
 
 #'
-#' @references  Yamada, T., & Srivastava, M. S. (2012). A test for multivariate analysis of variance in high dimension. Communications in Statistics-Theory and Methods, 41(13-14), 2602-2615.
+#' @references
+#' \insertRef{yamada2012test}{NRAHDLTP}
+#'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{
 #' \item{statistic}{the test statistic proposed by Yamada and Srivastava (2012).}

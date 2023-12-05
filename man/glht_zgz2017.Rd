@@ -65,5 +65,5 @@ G = cbind(diag(k-1),rep(-1,k-1))
 glht_zgz2017(Y,G,n,p)
 }
 \references{
-Zhang, J. T., Guo, J., & Zhou, B. (2017). Linear hypothesis testing in high-dimensional one-way MANOVA. Journal of Multivariate Analysis, 155, 200-216.
+\insertRef{Zhang_2017}{NRAHDLTP}
 }

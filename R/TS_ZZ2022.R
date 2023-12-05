@@ -17,7 +17,9 @@
 #' They showed that under the null hypothesis, \eqn{T_{ZZ}} and a chi-squared-type mixture have the same normal or non-normal limiting distribution.
 
 #'
-#' @references Zhang, J. T., & Zhu, T. (2022). A revisit to Bai–Saranadasa's two-sample test. Journal of Nonparametric Statistics, 34(1), 58-76.
+#' @references
+#' \insertRef{zhang2022revisit}{NRAHDLTP}
+#'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{
 #' \item{p.value}{the p-value of the test proposed by Zhang and Zhu (2022).}

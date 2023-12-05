@@ -63,5 +63,5 @@ y2 <- Gamma2 \%*\% Z2 + mu2\%*\%(rep(1,n2))
 tsbf_zz2022(y1, y2)
 }
 \references{
-Zhang, J. T., & Zhu, T. (2022). A Further Study on Chen–Qin’s Test for Two-Sample Behrens–Fisher Problems for High-Dimensional Data. Journal of Statistical Theory and Practice, 16(1), 1.
+\insertRef{zhang2022further}{NRAHDLTP}
 }

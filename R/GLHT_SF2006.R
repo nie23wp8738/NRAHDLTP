@@ -22,7 +22,7 @@
 #' They showed that under the null hypothesis, \eqn{T_{SF}} is asymptotically normally distributed.
 
 #'@references
-#'Srivastava, M. S., & Fujikoshi, Y. (2006). Multivariate analysis of variance with fewer observations than the dimension. Journal of Multivariate Analysis, 97(9), 1927-1940.
+#'\insertRef{srivastava2006multivariate}{NRAHDLTP}
 #'
 #'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:

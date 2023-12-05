@@ -19,7 +19,8 @@
 
 
 
-#' @references Zhang, J. T., Guo, J., Zhou, B., & Cheng, M. Y. (2020). A simple two-sample test in high dimensions based on \eqn{L^2}-norm. Journal of the American Statistical Association, 115(530), 1011-1027.
+#' @references
+#' \insertRef{zhang2020simple}{NRAHDLTP}
 #'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{

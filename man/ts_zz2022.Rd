@@ -55,5 +55,5 @@ y2 <- Gamma \%*\% Z2 + mu2\%*\%(rep(1,n2))
 ts_zz2022(y1, y2)
 }
 \references{
-Zhang, J. T., & Zhu, T. (2022). A revisit to Bai–Saranadasa's two-sample test. Journal of Nonparametric Statistics, 34(1), 58-76.
+\insertRef{zhang2022revisit}{NRAHDLTP}
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/GLHT_FHW2004.R
 \name{glht_fhw2004}
 \alias{glht_fhw2004}
-\title{Test proposed by Fujikoshi et al. (2004)}
+\title{Test for proposed by Fujikoshi et al. (2004)}
 \usage{
 glht_fhw2004(Y,X,C)
 }
@@ -59,5 +59,5 @@ C <- cbind(diag(q),-rep(1,q))
 glht_fhw2004(Y,X,C)
 }
 \references{
-Fujikoshi, Y., Himeno, T., & Wakaki, H. (2004). Asymptotic results of a high dimensional MANOVA test and power comparison when the dimension is large compared to the sample size. Journal of the Japan Statistical Society, 34(1), 19-26.
+\insertRef{fujikoshi_2004_asymptotic}{NRAHDLTP}
 }

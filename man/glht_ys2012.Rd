@@ -59,5 +59,5 @@ glht_ys2012(Y,X,C)
 
 }
 \references{
-Yamada, T., & Srivastava, M. S. (2012). A test for multivariate analysis of variance in high dimension. Communications in Statistics-Theory and Methods, 41(13-14), 2602-2615.
+\insertRef{yamada2012test}{NRAHDLTP}
 }

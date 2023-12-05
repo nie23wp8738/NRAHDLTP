@@ -53,5 +53,5 @@ ts_sd2008(y1, y2)
 
 }
 \references{
-Srivastava, M. S., & Du, M. (2008). A test for the mean vector with fewer observations than the dimension. Journal of Multivariate Analysis, 99(3), 386-402.
+\insertRef{Srivastava_2008}{NRAHDLTP}
 }

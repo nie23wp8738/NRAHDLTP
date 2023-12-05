@@ -56,5 +56,5 @@ Y[[g]] <- Gamma \%*\% Z + t(t(M[g,]))\%*\%(rep(1,n[g]))
 ks_s2007(Y,n,p)
 }
 \references{
-Schott, J. R. (2007). Some high-dimensional tests for a one-way MANOVA. Journal of Multivariate Analysis, 98(9), 1825-1839.
+\insertRef{schott2007some}{NRAHDLTP}
 }

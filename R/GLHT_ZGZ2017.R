@@ -25,7 +25,8 @@
 #'
 #' They showed that under the null hypothesis, \eqn{T_{ZGZ}} and a chi-squared-type mixture have the same normal or non-normal limiting distribution.
 #
-#' @references Zhang, J. T., Guo, J., & Zhou, B. (2017). Linear hypothesis testing in high-dimensional one-way MANOVA. Journal of Multivariate Analysis, 155, 200-216.
+#' @references
+#' \insertRef{Zhang_2017}{NRAHDLTP}
 #'
 #'
 #'

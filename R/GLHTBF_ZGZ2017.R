@@ -29,8 +29,8 @@
 #' They showed that under the null hypothesis, \eqn{T_{ZGZ}} is asymptotically normally distributed.
 #
 
-#' @references Zhou, B., Guo, J., & Zhang, J. T. (2017). High-dimensional general linear hypothesis testing under heteroscedasticity. Journal of Statistical Planning and Inference, 188, 36-54.
-#'
+#' @references
+#' \insertRef{zhou2017high}{NRAHDLTP}
 #'
 #'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:

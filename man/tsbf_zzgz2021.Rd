@@ -61,5 +61,5 @@ y2 <- Gamma2 \%*\% Z2 + mu2\%*\%(rep(1,n2))
 tsbf_zzgz2021(y1, y2)
 }
 \references{
-Zhang, J. T., Zhou, B., Guo, J., & Zhu, T. (2021). Two-sample Behrens–Fisher problems for high-dimensional data: A normal reference approach. Journal of Statistical Planning and Inference, 213, 142-161.
+\insertRef{Zhang_2021}{NRAHDLTP}
 }

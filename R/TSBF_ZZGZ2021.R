@@ -19,7 +19,9 @@
 #' They showed that under the null hypothesis, \eqn{T_{ZZGZ}} and a chi-squared-type mixture have the same normal or non-normal limiting distribution.
 #'
 #'
-#' @references Zhang, J. T., Zhou, B., Guo, J., & Zhu, T. (2021). Two-sample Behrens–Fisher problems for high-dimensional data: A normal reference approach. Journal of Statistical Planning and Inference, 213, 142-161.
+#' @references
+#' \insertRef{Zhang_2021}{NRAHDLTP}
+#'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{
 #' \item{p.value}{the p-value of the test proposed by Zhang et al. (2021).}

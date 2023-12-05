@@ -53,5 +53,5 @@ y2 <- Gamma \%*\% Z2 + mu2\%*\%(rep(1,n2))
 ts_zzz2020(y1, y2)
 }
 \references{
-Zhang, L., Zhu, T., & Zhang, J. T. (2020). A simple scale-invariant two-sample test for high-dimensional data. Econometrics and Statistics, 14, 131-144.
+\insertRef{Zhang_2020}{NRAHDLTP}
 }

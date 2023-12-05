@@ -20,8 +20,9 @@
 #' They showed that under the null hypothesis, \eqn{T_{SD}} is asymptotically normally distributed.
 
 #'
-#' @references Srivastava, M. S., & Du, M. (2008). A test for the mean vector with fewer observations than the dimension. Journal of Multivariate Analysis, 99(3), 386-402.
-
+#' @references
+#' \insertRef{Srivastava_2008}{NRAHDLTP}
+#'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{
 #' \item{statistic}{the test statistic proposed by Srivastava and Du (2008).}

@@ -19,7 +19,9 @@
 #' where  \eqn{\bar{\boldsymbol{y}}_{i},i=1,2} are the sample mean vectors and \eqn{\hat{\boldsymbol{\Omega}}_n} is the estimator of \eqn{\operatorname{Cov}[(n_1n_2/n)^{1/2}(\bar{\boldsymbol{y}}_1-\bar{\boldsymbol{y}}_2)]}.
 #' They showed that under the null hypothesis, \eqn{T_{ZWZ}} and an F-type mixture have the same normal or non-normal limiting distribution.
 
-#' @references Zhu, T., Wang, P., & Zhang, J. T. (2023). Two-sample Behrens--Fisher problems for high-dimensional data: a normal reference F-type test. arXiv preprint arXiv:2212.13372.
+#' @references
+#' \insertRef{zhu2022two}{NRAHDLTP}
+#'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{
 #' \item{p.value}{the p-value of the test proposed by  Zhu et al. (2023).}

@@ -21,7 +21,9 @@
 #' where \eqn{\boldsymbol{S}_h} and \eqn{\boldsymbol{S}_e} are the variation matrices due to the hypothesis and error, respectively, and \eqn{\boldsymbol{D}} is the diagonal matrix with the diagonal elements of \eqn{\boldsymbol{S}_e/(n-k)}.
 #' They showed that under the null hypothesis, \eqn{T_{ZZZ}} and a chi-squared-type mixture have the same limiting distribution.
 
-#' @references Zhu, T., Zhang, L., & Zhang, J. T. (2022). Hypothesis Testing in High-Dimensional Linear Regression: a Normal-Reference Scale-Invariant Test. Statistica Sinica, 32, 1857-1879.
+#' @references
+#' \insertRef{Zhu_2023}{NRAHDLTP}
+#'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{
 #' \item{p.value}{the \eqn{p}-value of the test proposed by Zhu et al. (2022)}

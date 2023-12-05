@@ -26,8 +26,9 @@
 #' where \eqn{\boldsymbol{C}=[(\boldsymbol{G D G}^\top)^{-1/2}\boldsymbol{G}]\otimes\boldsymbol{I}_p}, \eqn{\boldsymbol{D}=\operatorname{diag}(1/n_1,\ldots,1/n_k)}, and \eqn{h_{ij}} is the \eqn{(i,j)}th entry of the \eqn{k\times k} matrix \eqn{\boldsymbol{H}=\boldsymbol{G}^\top\boldsymbol{G}}.
 #'
 #'
-#' @references Zhang, J. T., & Zhu, T. (2022). A new normal reference test for linear hypothesis testing in high-dimensional heteroscedastic one-way MANOVA. Computational Statistics & Data Analysis, 168, 107385.
-
+#' @references
+#' \insertRef{Zhang_2022heteroscedastic}{NRAHDLTP}
+#'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{
 #' \item{p.value}{the \eqn{p}-value of the test proposed by Zhang and Zhu (2022).}

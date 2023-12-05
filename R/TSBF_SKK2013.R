@@ -19,7 +19,9 @@
 #' They showed that under the null hypothesis, \eqn{T_{SKK}} is asymptotically normally distributed.
 #'
 #'
-#' @references Srivastava, M. S., Katayama, S., & Kano, Y. (2013). A two sample test in high dimensional data. Journal of Multivariate Analysis, 114, 349-358.
+#' @references
+#' \insertRef{Srivastava_2013}{NRAHDLTP}
+#'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{
 #' \item{statistic}{the test statistic proposed by Srivastava et al. (2013)}

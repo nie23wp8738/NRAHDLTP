@@ -1,4 +1,4 @@
-#' @title Test proposed by Fujikoshi et al. (2004)
+#' @title Test for proposed by Fujikoshi et al. (2004)
 #' @description
 #' Fujikoshi et al. (2004)'s test for general linear hypothesis testing (GLHT) problem for high-dimensional data with assuming that underlying covariance matrices are the same.
 #'
@@ -23,7 +23,9 @@
 #' They showed that under the null hypothesis, \eqn{T_{FHW}} is asymptotically normally distributed.
 
 
-#' @references Fujikoshi, Y., Himeno, T., & Wakaki, H. (2004). Asymptotic results of a high dimensional MANOVA test and power comparison when the dimension is large compared to the sample size. Journal of the Japan Statistical Society, 34(1), 19-26.
+#' @references
+#' \insertRef{fujikoshi_2004_asymptotic}{NRAHDLTP}
+#'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{
 #' \item{statistic}{the test statistic proposed by Fujikoshi et al. (2004).}

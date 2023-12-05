@@ -60,5 +60,5 @@ tsbf_cq2010(y1, y2)
 
 }
 \references{
-Chen SX and Qin YL (2010). A two-sample test for high-dimensional data with applications to gene-set testing. The Annals of Statistics, 38(2), 808-835.
+\insertRef{Chen_2010}{NRAHDLTP}
 }

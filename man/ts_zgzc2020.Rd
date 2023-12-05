@@ -54,5 +54,5 @@ y2 <- Gamma \%*\% Z2 + mu2\%*\%(rep(1,n2))
 ts_zgzc2020(y1, y2)
 }
 \references{
-Zhang, J. T., Guo, J., Zhou, B., & Cheng, M. Y. (2020). A simple two-sample test in high dimensions based on \eqn{L^2}-norm. Journal of the American Statistical Association, 115(530), 1011-1027.
+\insertRef{zhang2020simple}{NRAHDLTP}
 }

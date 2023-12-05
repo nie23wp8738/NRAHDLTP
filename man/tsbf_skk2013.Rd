@@ -62,5 +62,5 @@ tsbf_skk2013(y1, y2)
 
 }
 \references{
-Srivastava, M. S., Katayama, S., & Kano, Y. (2013). A two sample test in high dimensional data. Journal of Multivariate Analysis, 114, 349-358.
+\insertRef{Srivastava_2013}{NRAHDLTP}
 }

@@ -67,5 +67,5 @@ G = cbind(diag(k-1),rep(-1,k-1))
 glhtbf_zgz2017(Y,G,n,p)
 }
 \references{
-Zhou, B., Guo, J., & Zhang, J. T. (2017). High-dimensional general linear hypothesis testing under heteroscedasticity. Journal of Statistical Planning and Inference, 188, 36-54.
+\insertRef{zhou2017high}{NRAHDLTP}
 }

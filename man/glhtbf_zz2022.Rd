@@ -68,5 +68,5 @@ G = cbind(diag(k-1),rep(-1,k-1))
 glhtbf_zz2022(Y,G,n,p)
 }
 \references{
-Zhang, J. T., & Zhu, T. (2022). A new normal reference test for linear hypothesis testing in high-dimensional heteroscedastic one-way MANOVA. Computational Statistics & Data Analysis, 168, 107385.
+\insertRef{Zhang_2022heteroscedastic}{NRAHDLTP}
 }

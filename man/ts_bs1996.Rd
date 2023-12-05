@@ -53,5 +53,5 @@ ts_bs1996(y1, y2)
 
 }
 \references{
-Bai, Z., & Saranadasa, H. (1996). Effect of high dimension: by an example of a two sample problem. Statistica Sinica, 311-329.
+\insertRef{bai1996effect}{NRAHDLTP}
 }

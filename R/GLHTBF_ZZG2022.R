@@ -24,7 +24,9 @@
 #'
 #' They showed that under the null hypothesis, \eqn{T_{ZZG}} and a chi-squared-type mixture have the same normal or non-normal limiting distribution.
 #
-#' @references Zhang, J. T., Zhou, B., & Guo, J. (2022). Linear hypothesis testing in high-dimensional heteroscedastic one-way MANOVA: A normal reference L2-norm based test. Journal of Multivariate Analysis, 187, 104816.
+#' @references
+#' \insertRef{zhang2022linear}{NRAHDLTP}
+#'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{
 #' \item{p.value}{the \eqn{p}-value of the test proposed by Zhang et al. (2022)}

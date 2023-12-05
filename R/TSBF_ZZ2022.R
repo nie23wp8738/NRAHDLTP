@@ -19,7 +19,9 @@
 #' They showed that under the null hypothesis, \eqn{T_{ZZ}} and a chi-squared-type mixture have the same normal or non-normal limiting distribution.
 #'
 
-#' @references Zhang, J. T., & Zhu, T. (2022). A Further Study on Chen–Qin’s Test for Two-Sample Behrens–Fisher Problems for High-Dimensional Data. Journal of Statistical Theory and Practice, 16(1), 1.
+#' @references
+#' \insertRef{zhang2022further}{NRAHDLTP}
+#'
 #'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{

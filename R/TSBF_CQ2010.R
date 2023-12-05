@@ -17,7 +17,8 @@
 #'  \deqn{T_{CQ} = \frac{\sum_{i \neq j}^{n_1} \boldsymbol{y}_{1i}^\top \boldsymbol{y}_{1j}}{n_1 (n_1 - 1)} + \frac{\sum_{i \neq j}^{n_2} \boldsymbol{y}_{2i}^\top \boldsymbol{y}_{2j}}{n_2 (n_2 - 1)} - 2 \frac{\sum_{i = 1}^{n_1} \sum_{j = 1}^{n_2} \boldsymbol{y}_{1i}^\top \boldsymbol{y}_{2j}}{n_1 n_2}.}
 #'  They showed that under the null hypothesis, \eqn{T_{CQ}} is asymptotically normally distributed.
 #'
-#'@references Chen SX and Qin YL (2010). A two-sample test for high-dimensional data with applications to gene-set testing. The Annals of Statistics, 38(2), 808-835.
+#'@references
+#'\insertRef{Chen_2010}{NRAHDLTP}
 #'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{

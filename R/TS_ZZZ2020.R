@@ -19,7 +19,9 @@
 
 #'
 
-#' @references Zhang, L., Zhu, T., & Zhang, J. T. (2020). A simple scale-invariant two-sample test for high-dimensional data. Econometrics and Statistics, 14, 131-144.
+#' @references
+#' \insertRef{Zhang_2020}{NRAHDLTP}
+#'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{
 #' \item{p.value}{the p-value of the test proposed by  Zhang et al. (2020).}

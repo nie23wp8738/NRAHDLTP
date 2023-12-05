@@ -21,8 +21,9 @@
 #'  where \eqn{\boldsymbol{H}=\sum_{i=1}^kn_i(\bar{\boldsymbol{y}}_i-\bar{\boldsymbol{y}})(\bar{\boldsymbol{y}}_i-\bar{\boldsymbol{y}})^\top}, \eqn{\boldsymbol{E}=\sum_{i=1}^k\sum_{j=1}^{n_i}(\boldsymbol{y}_{ij}-\bar{\boldsymbol{y}}_{i})(\boldsymbol{y}_{ij}-\bar{\boldsymbol{y}}_{i})^\top}, \eqn{h=k-1}, and \eqn{e=N-k}, with \eqn{N=n_1+\cdots+n_k}.
 #' They showed that under the null hypothesis, \eqn{T_{S}} is asymptotically normally distributed.
 #'
-#' @references Schott, J. R. (2007). Some high-dimensional tests for a one-way MANOVA. Journal of Multivariate Analysis, 98(9), 1825-1839.
-
+#' @references
+#' \insertRef{schott2007some}{NRAHDLTP}
+#'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{
 #' \item{statistic}{the test statistic proposed by Schott (2007).}

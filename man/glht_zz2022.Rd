@@ -66,5 +66,5 @@ G = cbind(diag(k-1),rep(-1,k-1))
 glht_zz2022(Y,G,n,p)
 }
 \references{
-Zhu, T., & Zhang, J. T. (2022). Linear hypothesis testing in high-dimensional one-way MANOVA: a new normal reference approach. Computational Statistics, 37(1), 1-27.
+\insertRef{zhu2022linear}{NRAHDLTP}
 }
