@@ -26,13 +26,13 @@ This dataset was acquired during a keratoconus study, a collaborative project in
 library(NRAHDLTP)
 data(corneal)
 dim(corneal)
-group1 <-  as.matrix(corneal[1:43,])
+group1 <- as.matrix(corneal[1:43, ])
 dim(group1)
-group2 <-  as.matrix(corneal[44:57,])
+group2 <- as.matrix(corneal[44:57, ])
 dim(group2)
-group3 <-  as.matrix(corneal[58:78,])
+group3 <- as.matrix(corneal[58:78, ])
 dim(group3)
-group4 <-  as.matrix(corneal[79:150,])
+group4 <- as.matrix(corneal[79:150, ])
 dim(group4)
 }
 \references{

@@ -28,38 +28,36 @@
 #' \describe{
 #' \item{statistic}{the test statistic proposed by Schott (2007).}
 #' \item{p.value}{the \eqn{p}-value of the test proposed by Schott (2007).}
-#'}
+#' }
 #'
 #' @examples
 #' set.seed(1234)
 #' k <- 3
 #' p <- 50
-#' n <- c(25,30,40)
+#' n <- c(25, 30, 40)
 #' rho <- 0.1
-#' M <- matrix(rep(0,k*p),nrow=k,ncol=p)
-#' y <- (-2*sqrt(1-rho)+sqrt(4*(1-rho)+4*p*rho))/(2*p)
-#' x <- y+sqrt((1-rho))
-#' Gamma <- matrix(rep(y,p*p),nrow=p)
-#' diag(Gamma) <- rep(x,p)
+#' M <- matrix(rep(0, k * p), nrow = k, ncol = p)
+#' y <- (-2 * sqrt(1 - rho) + sqrt(4 * (1 - rho) + 4 * p * rho)) / (2 * p)
+#' x <- y + sqrt((1 - rho))
+#' Gamma <- matrix(rep(y, p * p), nrow = p)
+#' diag(Gamma) <- rep(x, p)
 #' Y <- list()
-#' for(g in 1:k){
-#' Z <- matrix(rnorm(n[g]*p,mean = 0,sd = 1), p, n[g])
-#' Y[[g]] <- Gamma %*% Z + t(t(M[g,]))%*%(rep(1,n[g]))
+#' for (g in 1:k) {
+#'   Z <- matrix(rnorm(n[g] * p, mean = 0, sd = 1), p, n[g])
+#'   Y[[g]] <- Gamma %*% Z + t(t(M[g, ])) %*% (rep(1, n[g]))
 #' }
-#' ks_s2007(Y,n,p)
+#' ks_s2007(Y, n, p)
 #' @export
-ks_s2007<- function(Y,n,p)
-{
-  stats <- ks_s2007_cpp(Y,n,p);
-  stat <- stats[1];
-  sigma <- stats[2];
-  statstd <- stat/sigma;
+ks_s2007 <- function(Y, n, p) {
+  stats <- ks_s2007_cpp(Y, n, p)
+  stat <- stats[1]
+  sigma <- stats[2]
+  statstd <- stat / sigma
   pvalue <- pnorm(
-    q = stat/sigma, mean = 0, sd = 1, lower.tail = FALSE, log.p = FALSE
-  );
-  names(statstd)="statistic"
-  res =list(statistic=statstd,p.value=pvalue)
-  class(res)="htest"
-  return(res);
-
+    q = stat / sigma, mean = 0, sd = 1, lower.tail = FALSE, log.p = FALSE
+  )
+  names(statstd) <- "statistic"
+  res <- list(statistic = statstd, p.value = pvalue)
+  class(res) <- "htest"
+  return(res)
 }

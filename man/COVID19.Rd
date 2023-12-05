@@ -24,9 +24,9 @@ A COVID19 data set from NCBI with ID GSE152641. The data set profiled peripheral
 library(NRAHDLTP)
 data(COVID19)
 dim(COVID19)
-group1 <- as.matrix(COVID19[c(2:19,82:87),])
+group1 <- as.matrix(COVID19[c(2:19, 82:87), ])
 dim(group1)
-group2 <- as.matrix(COVID19[-c(1:19,82:87),])
+group2 <- as.matrix(COVID19[-c(1:19, 82:87), ])
 dim(group2)
 }
 \references{

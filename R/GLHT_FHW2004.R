@@ -30,7 +30,7 @@
 #' \describe{
 #' \item{statistic}{the test statistic proposed by Fujikoshi et al. (2004).}
 #' \item{p.value}{the \eqn{p}-value of the test proposed by Fujikoshi et al. (2004).}
-#'}
+#' }
 
 #' @examples
 
@@ -56,12 +56,11 @@
 
 
 #' @export
-glht_fhw2004<- function(Y,X,C)
-{
-  stats <- glht_fhw2004_cpp(Y,X,C)
-  pvalue <- pnorm(stats,0,1,lower.tail = FALSE, log.p = FALSE)
-  names(stats) = "statistic"
-  res = list(statistic=stats, p.value=pvalue)
-  class(res) = "htest"
+glht_fhw2004 <- function(Y, X, C) {
+  stats <- glht_fhw2004_cpp(Y, X, C)
+  pvalue <- pnorm(stats, 0, 1, lower.tail = FALSE, log.p = FALSE)
+  names(stats) <- "statistic"
+  res <- list(statistic = stats, p.value = pvalue)
+  class(res) <- "htest"
   return(res)
 }

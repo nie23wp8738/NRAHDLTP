@@ -36,45 +36,44 @@
 #' \item{beta0}{the parameter used in Zhang and Zhu (2022)'s test.}
 #' \item{beta1}{the parameter used in Zhang and Zhu (2022)'s test.}
 #' \item{df}{estimated approximate degrees of freedom of Zhang and Zhu (2022)'s test.}
-#'}
+#' }
 #'
 #' @examples
 #' set.seed(1234)
 #' k <- 3
 #' p <- 50
-#' n <- c(25,30,40)
+#' n <- c(25, 30, 40)
 #' rho <- 0.1
-#' M <- matrix(rep(0,k*p),nrow=k,ncol=p)
-#' avec <- seq(1,k)
+#' M <- matrix(rep(0, k * p), nrow = k, ncol = p)
+#' avec <- seq(1, k)
 #' Y <- list()
-#' for(g in 1:k){
-#' a <- avec[g]
-#' y <- (-2*sqrt(a*(1-rho))+sqrt(4*a*(1-rho)+4*p*a*rho))/(2*p)
-#' x <- y+sqrt(a*(1-rho))
-#' Gamma <- matrix(rep(y,p*p),nrow=p)
-#' diag(Gamma) <- rep(x,p)
-#' Z <- matrix(rnorm(n[g]*p,mean = 0,sd = 1), p, n[g])
-#' Y[[g]] <- Gamma %*% Z + t(t(M[g,]))%*%(rep(1,n[g]))
+#' for (g in 1:k) {
+#'   a <- avec[g]
+#'   y <- (-2 * sqrt(a * (1 - rho)) + sqrt(4 * a * (1 - rho) + 4 * p * a * rho)) / (2 * p)
+#'   x <- y + sqrt(a * (1 - rho))
+#'   Gamma <- matrix(rep(y, p * p), nrow = p)
+#'   diag(Gamma) <- rep(x, p)
+#'   Z <- matrix(rnorm(n[g] * p, mean = 0, sd = 1), p, n[g])
+#'   Y[[g]] <- Gamma %*% Z + t(t(M[g, ])) %*% (rep(1, n[g]))
 #' }
-#' G = cbind(diag(k-1),rep(-1,k-1))
-#' glhtbf_zz2022(Y,G,n,p)
+#' G <- cbind(diag(k - 1), rep(-1, k - 1))
+#' glhtbf_zz2022(Y, G, n, p)
 #' @export
-glhtbf_zz2022<- function(Y,G,n,p)
-{
-  stats <- glhtbf_zz2022_cpp(Y,G,n,p);
-  stat <- stats[1];
-  beta0 <- stats[2];
-  beta1 <- stats[3];
-  df <- stats[4];
-  statn <-(stat-beta0)/beta1;
+glhtbf_zz2022 <- function(Y, G, n, p) {
+  stats <- glhtbf_zz2022_cpp(Y, G, n, p)
+  stat <- stats[1]
+  beta0 <- stats[2]
+  beta1 <- stats[3]
+  df <- stats[4]
+  statn <- (stat - beta0) / beta1
   pvalue <- pchisq(
     q = statn, df = df, ncp = 0, lower.tail = FALSE, log.p = FALSE
-  );
-  names(stat) = "statistic"
-  names(df)="df"
-  names(beta1)="beta1"
-  names(beta0)="beta0"
-  res   = list(statistic=stat, p.value=pvalue,parameter=c(df,beta1,beta0))
-  class(res) = "htest"
+  )
+  names(stat) <- "statistic"
+  names(df) <- "df"
+  names(beta1) <- "beta1"
+  names(beta0) <- "beta0"
+  res <- list(statistic = stat, p.value = pvalue, parameter = c(df, beta1, beta0))
+  class(res) <- "htest"
   return(res)
 }

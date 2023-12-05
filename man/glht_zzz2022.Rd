@@ -40,23 +40,23 @@ They showed that under the null hypothesis, \eqn{T_{ZZZ}} and a chi-squared-type
 \examples{
 set.seed(1234)
 k <- 3
-q <- k-1
+q <- k - 1
 p <- 50
-n <- c(25,30,40)
+n <- c(25, 30, 40)
 rho <- 0.01
-Theta <- matrix(rep(0,k*p),nrow=k)
-X <- matrix(c(rep(1,n[1]),rep(0,sum(n)),rep(1,n[2]),rep(0,sum(n)),rep(1,n[3])),ncol=k,nrow=sum(n))
-y <- (-2*sqrt(1-rho)+sqrt(4*(1-rho)+4*p*rho))/(2*p)
-x <- y+sqrt((1-rho))
-Gamma <- matrix(rep(y,p*p),nrow=p)
-diag(Gamma) <- rep(x,p)
-U <- matrix(ncol = sum(n),nrow=p)
-for(i in 1:sum(n)){
-U[,i] <- rnorm(p,0,1)
+Theta <- matrix(rep(0, k * p), nrow = k)
+X <- matrix(c(rep(1, n[1]), rep(0, sum(n)), rep(1, n[2]), rep(0, sum(n)), rep(1, n[3])), ncol = k, nrow = sum(n))
+y <- (-2 * sqrt(1 - rho) + sqrt(4 * (1 - rho) + 4 * p * rho)) / (2 * p)
+x <- y + sqrt((1 - rho))
+Gamma <- matrix(rep(y, p * p), nrow = p)
+diag(Gamma) <- rep(x, p)
+U <- matrix(ncol = sum(n), nrow = p)
+for (i in 1:sum(n)) {
+  U[, i] <- rnorm(p, 0, 1)
 }
-Y <- X\%*\%Theta+t(U)\%*\%Gamma
-C <- cbind(diag(q),-rep(1,q))
-glht_zzz2022(Y,X,C)
+Y <- X \%*\% Theta + t(U) \%*\% Gamma
+C <- cbind(diag(q), -rep(1, q))
+glht_zzz2022(Y, X, C)
 
 }
 \references{

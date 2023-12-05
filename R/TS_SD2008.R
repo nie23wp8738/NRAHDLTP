@@ -34,30 +34,29 @@
 #' n1 <- 20
 #' n2 <- 30
 #' p <- 50
-#' mu1 <- t(t(rep(0,p)))
+#' mu1 <- t(t(rep(0, p)))
 #' mu2 <- mu1
 #' rho <- 0.1
-#' y <- (-2*sqrt(1-rho)+sqrt(4*(1-rho)+4*p*rho))/(2*p)
-#' x <- y+sqrt((1-rho))
-#' Gamma <- matrix(rep(y,p*p),nrow=p)
-#' diag(Gamma) <- rep(x,p)
-#' Z1 <- matrix(rnorm(n1*p,mean = 0,sd = 1), p, n1)
-#' Z2 <- matrix(rnorm(n2*p,mean = 0,sd = 1), p, n2)
-#' y1 <- Gamma %*% Z1 + mu1%*%(rep(1,n1))
-#' y2 <- Gamma %*% Z2 + mu2%*%(rep(1,n2))
+#' y <- (-2 * sqrt(1 - rho) + sqrt(4 * (1 - rho) + 4 * p * rho)) / (2 * p)
+#' x <- y + sqrt((1 - rho))
+#' Gamma <- matrix(rep(y, p * p), nrow = p)
+#' diag(Gamma) <- rep(x, p)
+#' Z1 <- matrix(rnorm(n1 * p, mean = 0, sd = 1), p, n1)
+#' Z2 <- matrix(rnorm(n2 * p, mean = 0, sd = 1), p, n2)
+#' y1 <- Gamma %*% Z1 + mu1 %*% (rep(1, n1))
+#' y2 <- Gamma %*% Z2 + mu2 %*% (rep(1, n2))
 #' ts_sd2008(y1, y2)
 #'
 #' @export
-ts_sd2008<- function(y1,y2)
-{
-  if (nrow(y1)!=nrow(y2)){
+ts_sd2008 <- function(y1, y2) {
+  if (nrow(y1) != nrow(y2)) {
     stop("y1 and y2 must have same dimension!")
-  }else{
-  stat <- ts_sd2008_cpp(y1,y2)
-  pvalue <- pnorm(stat,0,1,lower.tail = FALSE, log.p = FALSE)
+  } else {
+    stat <- ts_sd2008_cpp(y1, y2)
+    pvalue <- pnorm(stat, 0, 1, lower.tail = FALSE, log.p = FALSE)
   }
-  names(stat) = "statistic"
-  res   = list(statistic=stat, p.value=pvalue)
-  class(res) = "htest"
+  names(stat) <- "statistic"
+  res <- list(statistic = stat, p.value = pvalue)
+  class(res) <- "htest"
   return(res)
 }

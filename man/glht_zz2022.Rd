@@ -50,20 +50,20 @@ They showed that under the null hypothesis, \eqn{T_{ZZ}} and a chi-squared-type 
 set.seed(1234)
 k <- 3
 p <- 50
-n <- c(25,30,40)
+n <- c(25, 30, 40)
 rho <- 0.1
-M <- matrix(rep(0,k*p),nrow=k,ncol=p)
-y <- (-2*sqrt(1-rho)+sqrt(4*(1-rho)+4*p*rho))/(2*p)
-x <- y+sqrt((1-rho))
-Gamma <- matrix(rep(y,p*p),nrow=p)
-diag(Gamma) <- rep(x,p)
+M <- matrix(rep(0, k * p), nrow = k, ncol = p)
+y <- (-2 * sqrt(1 - rho) + sqrt(4 * (1 - rho) + 4 * p * rho)) / (2 * p)
+x <- y + sqrt((1 - rho))
+Gamma <- matrix(rep(y, p * p), nrow = p)
+diag(Gamma) <- rep(x, p)
 Y <- list()
-for(g in 1:k){
-Z <- matrix(rnorm(n[g]*p,mean = 0,sd = 1), p, n[g])
-Y[[g]] <- Gamma \%*\% Z + t(t(M[g,]))\%*\%(rep(1,n[g]))
+for (g in 1:k) {
+  Z <- matrix(rnorm(n[g] * p, mean = 0, sd = 1), p, n[g])
+  Y[[g]] <- Gamma \%*\% Z + t(t(M[g, ])) \%*\% (rep(1, n[g]))
 }
-G = cbind(diag(k-1),rep(-1,k-1))
-glht_zz2022(Y,G,n,p)
+G <- cbind(diag(k - 1), rep(-1, k - 1))
+glht_zz2022(Y, G, n, p)
 }
 \references{
 \insertRef{zhu2022linear}{NRAHDLTP}

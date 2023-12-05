@@ -29,44 +29,42 @@
 #' \item{p.value}{the \eqn{p}-value of the test proposed by Zhu et al. (2022)}
 #' \item{statistic}{the test statistic proposed by Zhu et al. (2022).}
 #' \item{df}{estimated approximate degrees of freedom of Zhu et al. (2022)'s test.}
-#'}
+#' }
 
 #' @examples
 #' set.seed(1234)
 #' k <- 3
-#' q <- k-1
+#' q <- k - 1
 #' p <- 50
-#' n <- c(25,30,40)
+#' n <- c(25, 30, 40)
 #' rho <- 0.01
-#' Theta <- matrix(rep(0,k*p),nrow=k)
-#' X <- matrix(c(rep(1,n[1]),rep(0,sum(n)),rep(1,n[2]),rep(0,sum(n)),rep(1,n[3])),ncol=k,nrow=sum(n))
-#' y <- (-2*sqrt(1-rho)+sqrt(4*(1-rho)+4*p*rho))/(2*p)
-#' x <- y+sqrt((1-rho))
-#' Gamma <- matrix(rep(y,p*p),nrow=p)
-#' diag(Gamma) <- rep(x,p)
-#' U <- matrix(ncol = sum(n),nrow=p)
-#' for(i in 1:sum(n)){
-#' U[,i] <- rnorm(p,0,1)
+#' Theta <- matrix(rep(0, k * p), nrow = k)
+#' X <- matrix(c(rep(1, n[1]), rep(0, sum(n)), rep(1, n[2]), rep(0, sum(n)), rep(1, n[3])), ncol = k, nrow = sum(n))
+#' y <- (-2 * sqrt(1 - rho) + sqrt(4 * (1 - rho) + 4 * p * rho)) / (2 * p)
+#' x <- y + sqrt((1 - rho))
+#' Gamma <- matrix(rep(y, p * p), nrow = p)
+#' diag(Gamma) <- rep(x, p)
+#' U <- matrix(ncol = sum(n), nrow = p)
+#' for (i in 1:sum(n)) {
+#'   U[, i] <- rnorm(p, 0, 1)
 #' }
-#' Y <- X%*%Theta+t(U)%*%Gamma
-#' C <- cbind(diag(q),-rep(1,q))
-#' glht_zzz2022(Y,X,C)
+#' Y <- X %*% Theta + t(U) %*% Gamma
+#' C <- cbind(diag(q), -rep(1, q))
+#' glht_zzz2022(Y, X, C)
 #'
 #' @export
-glht_zzz2022<- function(Y,X,C)
-{
-  stats <- glht_zzz2022_cpp(Y,X,C)
+glht_zzz2022 <- function(Y, X, C) {
+  stats <- glht_zzz2022_cpp(Y, X, C)
   stat <- stats[1]
-  df<- stats[2]
+  df <- stats[2]
   n <- dim(Y)[1]
   k <- dim(X)[2]
-  statnew<- stat*(n-k-2)/(n-k)
-  dhatnew <- df*(n-k)^2/((n-k-2)^2)
-  pvalue<- 1-pchisq(dhatnew*statnew,dhatnew)
-  names(statnew) = "statistic"
-  names(dhatnew)="df"
-  res   = list(statistic=statnew, p.value=pvalue,parameter=dhatnew)
-  class(res) = "htest"
+  statnew <- stat * (n - k - 2) / (n - k)
+  dhatnew <- df * (n - k)^2 / ((n - k - 2)^2)
+  pvalue <- 1 - pchisq(dhatnew * statnew, dhatnew)
+  names(statnew) <- "statistic"
+  names(dhatnew) <- "df"
+  res <- list(statistic = statnew, p.value = pvalue, parameter = dhatnew)
+  class(res) <- "htest"
   return(res)
 }
-

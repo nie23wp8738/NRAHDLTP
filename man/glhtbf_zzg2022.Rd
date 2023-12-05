@@ -49,22 +49,22 @@ They showed that under the null hypothesis, \eqn{T_{ZZG}} and a chi-squared-type
 set.seed(1234)
 k <- 3
 p <- 50
-n <- c(25,30,40)
+n <- c(25, 30, 40)
 rho <- 0.1
-M <- matrix(rep(0,k*p),nrow=k,ncol=p)
-avec <- seq(1,k)
+M <- matrix(rep(0, k * p), nrow = k, ncol = p)
+avec <- seq(1, k)
 Y <- list()
-for(g in 1:k){
-a <- avec[g]
-y <- (-2*sqrt(a*(1-rho))+sqrt(4*a*(1-rho)+4*p*a*rho))/(2*p)
-x <- y+sqrt(a*(1-rho))
-Gamma <- matrix(rep(y,p*p),nrow=p)
-diag(Gamma) <- rep(x,p)
-Z <- matrix(rnorm(n[g]*p,mean = 0,sd = 1), p, n[g])
-Y[[g]] <- Gamma \%*\% Z + t(t(M[g,]))\%*\%(rep(1,n[g]))
+for (g in 1:k) {
+  a <- avec[g]
+  y <- (-2 * sqrt(a * (1 - rho)) + sqrt(4 * a * (1 - rho) + 4 * p * a * rho)) / (2 * p)
+  x <- y + sqrt(a * (1 - rho))
+  Gamma <- matrix(rep(y, p * p), nrow = p)
+  diag(Gamma) <- rep(x, p)
+  Z <- matrix(rnorm(n[g] * p, mean = 0, sd = 1), p, n[g])
+  Y[[g]] <- Gamma \%*\% Z + t(t(M[g, ])) \%*\% (rep(1, n[g]))
 }
-G = cbind(diag(k-1),rep(-1,k-1))
-glhtbf_zzg2022(Y,G,n,p)
+G <- cbind(diag(k - 1), rep(-1, k - 1))
+glhtbf_zzg2022(Y, G, n, p)
 }
 \references{
 \insertRef{zhang2022linear}{NRAHDLTP}

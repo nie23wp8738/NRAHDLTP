@@ -42,24 +42,24 @@ set.seed(1234)
 n1 <- 20
 n2 <- 30
 p <- 50
-mu1 <- t(t(rep(0,p)))
+mu1 <- t(t(rep(0, p)))
 mu2 <- mu1
 rho1 <- 0.1
 rho2 <- 0.2
 a1 <- 1
 a2 <- 2
-w1 <- (-2*sqrt(a1*(1-rho1))+sqrt(4*a1*(1-rho1)+4*p*a1*rho1))/(2*p)
-x1 <- w1+sqrt(a1*(1-rho1))
-Gamma1 <- matrix(rep(w1,p*p),nrow=p)
-diag(Gamma1) <- rep(x1,p)
-w2 <- (-2*sqrt(a2*(1-rho2))+sqrt(4*a2*(1-rho2)+4*p*a2*rho2))/(2*p)
-x2 <- w2+sqrt(a2*(1-rho2))
-Gamma2 <- matrix(rep(w2,p*p),nrow=p)
-diag(Gamma2) <- rep(x2,p)
-Z1 <- matrix(rnorm(n1*p,mean = 0,sd = 1), p, n1)
-Z2 <- matrix(rnorm(n2*p,mean = 0,sd = 1), p, n2)
-y1 <- Gamma1 \%*\% Z1 + mu1\%*\%(rep(1,n1))
-y2 <- Gamma2 \%*\% Z2 + mu2\%*\%(rep(1,n2))
+w1 <- (-2 * sqrt(a1 * (1 - rho1)) + sqrt(4 * a1 * (1 - rho1) + 4 * p * a1 * rho1)) / (2 * p)
+x1 <- w1 + sqrt(a1 * (1 - rho1))
+Gamma1 <- matrix(rep(w1, p * p), nrow = p)
+diag(Gamma1) <- rep(x1, p)
+w2 <- (-2 * sqrt(a2 * (1 - rho2)) + sqrt(4 * a2 * (1 - rho2) + 4 * p * a2 * rho2)) / (2 * p)
+x2 <- w2 + sqrt(a2 * (1 - rho2))
+Gamma2 <- matrix(rep(w2, p * p), nrow = p)
+diag(Gamma2) <- rep(x2, p)
+Z1 <- matrix(rnorm(n1 * p, mean = 0, sd = 1), p, n1)
+Z2 <- matrix(rnorm(n2 * p, mean = 0, sd = 1), p, n2)
+y1 <- Gamma1 \%*\% Z1 + mu1 \%*\% (rep(1, n1))
+y2 <- Gamma2 \%*\% Z2 + mu2 \%*\% (rep(1, n2))
 tsbf_zz2022(y1, y2)
 }
 \references{

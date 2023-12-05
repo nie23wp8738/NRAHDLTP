@@ -1,6 +1,6 @@
 #' @title Test proposed by Yamada and Srivastava (2012)
 #' @description
-#'Yamada and Srivastava (2012)'test for general linear hypothesis testing (GLHT) problem for high-dimensional data with assuming that underlying covariance matrices are the same.
+#' Yamada and Srivastava (2012)'test for general linear hypothesis testing (GLHT) problem for high-dimensional data with assuming that underlying covariance matrices are the same.
 
 #' @usage glht_ys2012(Y,X,C)
 #' @param Y An \eqn{n\times p} response matrix obtained by independently observing a \eqn{p}-dimensional response variable for \eqn{n} subjects.
@@ -30,7 +30,7 @@
 #' \describe{
 #' \item{statistic}{the test statistic proposed by Yamada and Srivastava (2012).}
 #' \item{p.value}{the \eqn{p}-value of the test proposed by Yamada and Srivastava (2012).}
-#'}
+#' }
 
 #' @examples
 
@@ -55,16 +55,14 @@
 #' glht_ys2012(Y,X,C)
 #'
 #' @export
-glht_ys2012<- function(Y,X,C)
-{
-  stats <- glht_ys2012_cpp(Y,X,C)
-  stat<- stats[1]
-  cpn <-  stats[2]
-  pvalue <- pnorm(stat,0,1,lower.tail = FALSE, log.p = FALSE)
-  names(stat) = "statistic"
-  names(cpn)="cpn"
-  res   = list(statistic=stat, p.value=pvalue, parameters=cpn)
-  class(res) = "htest"
+glht_ys2012 <- function(Y, X, C) {
+  stats <- glht_ys2012_cpp(Y, X, C)
+  stat <- stats[1]
+  cpn <- stats[2]
+  pvalue <- pnorm(stat, 0, 1, lower.tail = FALSE, log.p = FALSE)
+  names(stat) <- "statistic"
+  names(cpn) <- "cpn"
+  res <- list(statistic = stat, p.value = pvalue, parameters = cpn)
+  class(res) <- "htest"
   return(res)
-
 }

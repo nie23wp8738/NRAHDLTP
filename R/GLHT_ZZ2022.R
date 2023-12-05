@@ -42,38 +42,36 @@
 #' set.seed(1234)
 #' k <- 3
 #' p <- 50
-#' n <- c(25,30,40)
+#' n <- c(25, 30, 40)
 #' rho <- 0.1
-#' M <- matrix(rep(0,k*p),nrow=k,ncol=p)
-#' y <- (-2*sqrt(1-rho)+sqrt(4*(1-rho)+4*p*rho))/(2*p)
-#' x <- y+sqrt((1-rho))
-#' Gamma <- matrix(rep(y,p*p),nrow=p)
-#' diag(Gamma) <- rep(x,p)
+#' M <- matrix(rep(0, k * p), nrow = k, ncol = p)
+#' y <- (-2 * sqrt(1 - rho) + sqrt(4 * (1 - rho) + 4 * p * rho)) / (2 * p)
+#' x <- y + sqrt((1 - rho))
+#' Gamma <- matrix(rep(y, p * p), nrow = p)
+#' diag(Gamma) <- rep(x, p)
 #' Y <- list()
-#' for(g in 1:k){
-#' Z <- matrix(rnorm(n[g]*p,mean = 0,sd = 1), p, n[g])
-#' Y[[g]] <- Gamma %*% Z + t(t(M[g,]))%*%(rep(1,n[g]))
+#' for (g in 1:k) {
+#'   Z <- matrix(rnorm(n[g] * p, mean = 0, sd = 1), p, n[g])
+#'   Y[[g]] <- Gamma %*% Z + t(t(M[g, ])) %*% (rep(1, n[g]))
 #' }
-#' G = cbind(diag(k-1),rep(-1,k-1))
-#' glht_zz2022(Y,G,n,p)
+#' G <- cbind(diag(k - 1), rep(-1, k - 1))
+#' glht_zz2022(Y, G, n, p)
 #' @export
-glht_zz2022<- function(Y,G,n,p)
-{
-  stats <- glht_zz2022_cpp(Y,G,n,p);
-  stat <- stats[1];
-  beta0 <- stats[2];
-  beta1 <- stats[3];
-  df <- stats[4];
-  statn <-(stat-beta0)/beta1;
-  pvalue<- pchisq(
+glht_zz2022 <- function(Y, G, n, p) {
+  stats <- glht_zz2022_cpp(Y, G, n, p)
+  stat <- stats[1]
+  beta0 <- stats[2]
+  beta1 <- stats[3]
+  df <- stats[4]
+  statn <- (stat - beta0) / beta1
+  pvalue <- pchisq(
     q = statn, df = df, ncp = 0, lower.tail = FALSE, log.p = FALSE
-  );
-  names(stat)="statistic"
-  names(beta0)="beta0"
-  names(beta1)="beta1"
-  names(df)="df"
-  res =list(statistic=stat,p.value=pvalue,parameters=c(df,beta1,beta0))
-  class(res)="htest"
-  return(res);
+  )
+  names(stat) <- "statistic"
+  names(beta0) <- "beta0"
+  names(beta1) <- "beta1"
+  names(df) <- "df"
+  res <- list(statistic = stat, p.value = pvalue, parameters = c(df, beta1, beta0))
+  class(res) <- "htest"
+  return(res)
 }
-

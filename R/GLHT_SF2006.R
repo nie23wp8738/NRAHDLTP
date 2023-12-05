@@ -21,15 +21,15 @@
 #' where \eqn{\boldsymbol{W}} and \eqn{\boldsymbol{B}} are the matrix of sum of squares and products due to error and the error, respectively, and \eqn{\hat{a}_2=[\operatorname{tr}(\boldsymbol{W}^2)-\operatorname{tr}^2(\boldsymbol{W})/n]/[(n-1)(n+2)p]}.
 #' They showed that under the null hypothesis, \eqn{T_{SF}} is asymptotically normally distributed.
 
-#'@references
-#'\insertRef{srivastava2006multivariate}{NRAHDLTP}
+#' @references
+#' \insertRef{srivastava2006multivariate}{NRAHDLTP}
 #'
 #'
 #' @return A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 #' \describe{
 #' \item{statistic}{the test statistic proposed by Srivastava and Fujikoshi (2006).}
 #' \item{p.value}{the \eqn{p}-value of the test proposed by Srivastava and Fujikoshi (2006).}
-#'}
+#' }
 
 #' @examples
 
@@ -55,12 +55,11 @@
 #'
 #'
 #' @export
-glht_sf2006<- function(Y,X,C)
-{
-  stat <- glht_sf2006_cpp(Y,X,C)
-  pvalue <- pnorm(stat,0,1,lower.tail = FALSE, log.p = FALSE)
-  names(stat) = "statistic"
-  res = list(statistic=stat, p.value=pvalue)
-  class(res) = "htest"
+glht_sf2006 <- function(Y, X, C) {
+  stat <- glht_sf2006_cpp(Y, X, C)
+  pvalue <- pnorm(stat, 0, 1, lower.tail = FALSE, log.p = FALSE)
+  names(stat) <- "statistic"
+  res <- list(statistic = stat, p.value = pvalue)
+  class(res) <- "htest"
   return(res)
 }

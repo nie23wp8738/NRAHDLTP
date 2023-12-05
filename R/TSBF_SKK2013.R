@@ -34,44 +34,42 @@
 #' n1 <- 20
 #' n2 <- 30
 #' p <- 50
-#' mu1 <- t(t(rep(0,p)))
+#' mu1 <- t(t(rep(0, p)))
 #' mu2 <- mu1
 #' rho1 <- 0.1
 #' rho2 <- 0.2
 #' a1 <- 1
 #' a2 <- 2
-#' w1 <- (-2*sqrt(a1*(1-rho1))+sqrt(4*a1*(1-rho1)+4*p*a1*rho1))/(2*p)
-#' x1 <- w1+sqrt(a1*(1-rho1))
-#' Gamma1 <- matrix(rep(w1,p*p),nrow=p)
-#' diag(Gamma1) <- rep(x1,p)
-#' w2 <- (-2*sqrt(a2*(1-rho2))+sqrt(4*a2*(1-rho2)+4*p*a2*rho2))/(2*p)
-#' x2 <- w2+sqrt(a2*(1-rho2))
-#' Gamma2 <- matrix(rep(w2,p*p),nrow=p)
-#' diag(Gamma2) <- rep(x2,p)
+#' w1 <- (-2 * sqrt(a1 * (1 - rho1)) + sqrt(4 * a1 * (1 - rho1) + 4 * p * a1 * rho1)) / (2 * p)
+#' x1 <- w1 + sqrt(a1 * (1 - rho1))
+#' Gamma1 <- matrix(rep(w1, p * p), nrow = p)
+#' diag(Gamma1) <- rep(x1, p)
+#' w2 <- (-2 * sqrt(a2 * (1 - rho2)) + sqrt(4 * a2 * (1 - rho2) + 4 * p * a2 * rho2)) / (2 * p)
+#' x2 <- w2 + sqrt(a2 * (1 - rho2))
+#' Gamma2 <- matrix(rep(w2, p * p), nrow = p)
+#' diag(Gamma2) <- rep(x2, p)
 
-#'Z1 <- matrix(rnorm(n1*p,mean = 0,sd = 1), p, n1)
-#'Z2 <- matrix(rnorm(n2*p,mean = 0,sd = 1), p, n2)
-#'y1 <- Gamma1 %*% Z1 + mu1%*%(rep(1,n1))
-#'y2 <- Gamma2 %*% Z2 + mu2%*%(rep(1,n2))
+#' Z1 <- matrix(rnorm(n1*p,mean = 0,sd = 1), p, n1)
+#' Z2 <- matrix(rnorm(n2*p,mean = 0,sd = 1), p, n2)
+#' y1 <- Gamma1 %*% Z1 + mu1%*%(rep(1,n1))
+#' y2 <- Gamma2 %*% Z2 + mu2%*%(rep(1,n2))
 
 #' tsbf_skk2013(y1, y2)
 #'
 #'
 #' @export
-tsbf_skk2013<- function(y1,y2)
-{
-  if (nrow(y1)!=nrow(y2)){
+tsbf_skk2013 <- function(y1, y2) {
+  if (nrow(y1) != nrow(y2)) {
     stop("y1 and y2 must have same dimension!")
-  }else{
-  stats <- tsbf_skk2013_cpp(y1,y2)
-  stat <- stats[1]
-  cpn <-  stats[3]
-  pvalue <- pnorm(stat,0,1,lower.tail = FALSE, log.p = FALSE);
+  } else {
+    stats <- tsbf_skk2013_cpp(y1, y2)
+    stat <- stats[1]
+    cpn <- stats[3]
+    pvalue <- pnorm(stat, 0, 1, lower.tail = FALSE, log.p = FALSE)
   }
-  names(stat) = "statistic"
-  names(cpn)="cpn"
-  res   = list(statistic=stat, p.value=pvalue, parameters=cpn)
-  class(res) = "htest"
+  names(stat) <- "statistic"
+  names(cpn) <- "cpn"
+  res <- list(statistic = stat, p.value = pvalue, parameters = cpn)
+  class(res) <- "htest"
   return(res)
-
 }

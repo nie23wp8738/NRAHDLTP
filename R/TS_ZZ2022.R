@@ -12,7 +12,7 @@
 #' The primary object is to test
 #' \deqn{H_{0}: \boldsymbol{\mu}_1 = \boldsymbol{\mu}_2\; \operatorname{versus}\; H_{1}: \boldsymbol{\mu}_1 \neq \boldsymbol{\mu}_2.}
 #' Zhang et al.(2022) proposed the following test statistic:
-#'\deqn{T_{ZZ} = \frac{n_1n_2}{n} \|\bar{\boldsymbol{y}}_1 - \bar{\boldsymbol{y}}_2\|^2-\operatorname{tr}(\hat{\boldsymbol{\Sigma}}),}
+#' \deqn{T_{ZZ} = \frac{n_1n_2}{n} \|\bar{\boldsymbol{y}}_1 - \bar{\boldsymbol{y}}_2\|^2-\operatorname{tr}(\hat{\boldsymbol{\Sigma}}),}
 #' where  \eqn{\bar{\boldsymbol{y}}_{i},i=1,2} are the sample mean vectors and \eqn{\hat{\boldsymbol{\Sigma}}} is the pooled sample covariance matrix.
 #' They showed that under the null hypothesis, \eqn{T_{ZZ}} and a chi-squared-type mixture have the same normal or non-normal limiting distribution.
 
@@ -34,39 +34,38 @@
 #' n1 <- 20
 #' n2 <- 30
 #' p <- 50
-#' mu1 <- t(t(rep(0,p)))
+#' mu1 <- t(t(rep(0, p)))
 #' mu2 <- mu1
 #' rho <- 0.1
-#' y <- (-2*sqrt(1-rho)+sqrt(4*(1-rho)+4*p*rho))/(2*p)
-#' x <- y+sqrt((1-rho))
-#' Gamma <- matrix(rep(y,p*p),nrow=p)
-#' diag(Gamma) <- rep(x,p)
-#' Z1 <- matrix(rnorm(n1*p,mean = 0,sd = 1), p, n1)
-#' Z2 <- matrix(rnorm(n2*p,mean = 0,sd = 1), p, n2)
-#' y1 <- Gamma %*% Z1 + mu1%*%(rep(1,n1))
-#' y2 <- Gamma %*% Z2 + mu2%*%(rep(1,n2))
+#' y <- (-2 * sqrt(1 - rho) + sqrt(4 * (1 - rho) + 4 * p * rho)) / (2 * p)
+#' x <- y + sqrt((1 - rho))
+#' Gamma <- matrix(rep(y, p * p), nrow = p)
+#' diag(Gamma) <- rep(x, p)
+#' Z1 <- matrix(rnorm(n1 * p, mean = 0, sd = 1), p, n1)
+#' Z2 <- matrix(rnorm(n2 * p, mean = 0, sd = 1), p, n2)
+#' y1 <- Gamma %*% Z1 + mu1 %*% (rep(1, n1))
+#' y2 <- Gamma %*% Z2 + mu2 %*% (rep(1, n2))
 #' ts_zz2022(y1, y2)
 #' @export
-ts_zz2022 <- function(y1,y2)
-{
-  if(nrow(y1)!=nrow(y2)){
-  stop("y1 and y2 must have same dimension!")
-}else{
-  stats <- ts_zz2022_cpp(y1,y2);
-  stat <- stats[1];
-  beta0 <- stats[2];
-  beta1 <- stats[3];
-  df <- stats[4];
-  statn <-(stat-beta0)/beta1;
-  pvalue <- pchisq(
-    q = statn, df = df, ncp = 0, lower.tail = FALSE, log.p = FALSE
-  );
-}
-  names(stat)="statistic"
-  names(beta1)="beta1"
-  names(beta0)="beta0"
-  names(df)="df"
-  res =list(statistic=stat,p.value=pvalue,parameters=c(beta1,beta0,df))
-  class(res)="htest"
-  return(res);
+ts_zz2022 <- function(y1, y2) {
+  if (nrow(y1) != nrow(y2)) {
+    stop("y1 and y2 must have same dimension!")
+  } else {
+    stats <- ts_zz2022_cpp(y1, y2)
+    stat <- stats[1]
+    beta0 <- stats[2]
+    beta1 <- stats[3]
+    df <- stats[4]
+    statn <- (stat - beta0) / beta1
+    pvalue <- pchisq(
+      q = statn, df = df, ncp = 0, lower.tail = FALSE, log.p = FALSE
+    )
+  }
+  names(stat) <- "statistic"
+  names(beta1) <- "beta1"
+  names(beta0) <- "beta0"
+  names(df) <- "df"
+  res <- list(statistic = stat, p.value = pvalue, parameters = c(beta1, beta0, df))
+  class(res) <- "htest"
+  return(res)
 }
