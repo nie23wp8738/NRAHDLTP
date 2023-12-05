@@ -8,6 +8,7 @@
 #' @importFrom Rcpp evalCpp
 #' @importFrom readr read_csv
 #' @importFrom stats pf
+#' @importFrom Rdpack reprompt
 
 ## usethis namespace: start
 #' @useDynLib NRAHDLTP, .registration = TRUE

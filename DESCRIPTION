@@ -1,7 +1,11 @@
 Package: NRAHDLTP
 Type: Package
 Title: Location Tests for High-Dimensional Problems Including Normal-Reference Approach
+<<<<<<< HEAD
 Version: 0.1.2
+=======
+Version: 0.1.1
+>>>>>>> 32265635ad60c1211f844f32db577e811b126234
 Authors@R: c(person("Pengfei", "Wang", role = c("aut", "cre"),
                       email = "nie23.wp8738@e.ntu.edu.sg"), 
               person("Shuqi", "Luo", role = c("aut"),
