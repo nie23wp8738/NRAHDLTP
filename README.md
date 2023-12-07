@@ -1,10 +1,60 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+[![](https://www.r-pkg.org/badges/version/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP)
+[![](https://www.r-pkg.org/badges/last-release/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP)
+
 # NRAHDLTP
-Location Tests for High-Dimensional Problems Including Normal-Reference Approach
 
-if you want to install this package, you can run the following code:
+<!-- badges: start -->
 
+[![R-CMD-check](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/nie23wp8738/NRAHDLTP/branch/main/graph/badge.svg)](https://app.codecov.io/gh/nie23wp8738/NRAHDLTP?branch=main)
+
+<!-- badges: end -->
+
+The goal of NRAHDLTP is to …
+
+## Installation
+
+Install from CRAN:
+
+``` r
+install.packages("NRAHDLTP")
+```
+
+Or install the development version of NRAHDLTP from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
 devtools::install_github("nie23wp8738/NRAHDLTP")
+```
 
-or
+## Example
 
-remotes::install_github("nie23wp8738/NRAHDLTP")
+This is a basic example which shows you how to solve a common problem:
+
+``` r
+library(NRAHDLTP)
+## basic example code
+```
+
+What is special about using `README.Rmd` instead of just `README.md`?
+You can include R chunks like so:
+
+``` r
+summary(cars)
+#>      speed           dist       
+#>  Min.   : 4.0   Min.   :  2.00  
+#>  1st Qu.:12.0   1st Qu.: 26.00  
+#>  Median :15.0   Median : 36.00  
+#>  Mean   :15.4   Mean   : 42.98  
+#>  3rd Qu.:19.0   3rd Qu.: 56.00  
+#>  Max.   :25.0   Max.   :120.00
+```
+
+You’ll still need to render `README.Rmd` regularly, to keep `README.md`
+up-to-date. `devtools::build_readme()` is handy for this.
