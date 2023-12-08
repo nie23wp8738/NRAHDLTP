@@ -11,7 +11,7 @@ We provide a collection of various classical tests and latest normal-reference a
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/nie23wp8738/NRAHDLTP}
+  \item \url{https://nie23wp8738.github.io/NRAHDLTP/}
   \item Report bugs at \url{https://github.com/nie23wp8738/NRAHDLTP/issues}
 }
 
