@@ -67,3 +67,4 @@ glht_zgz2017(Y, G, n, p)
 \references{
 \insertRef{Zhang_2017}{NRAHDLTP}
 }
+\concept{nraglht}

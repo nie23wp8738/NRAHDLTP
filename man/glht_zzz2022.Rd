@@ -46,7 +46,8 @@ n <- c(25, 30, 40)
 rho <- 0.01
 Theta <- matrix(rep(0, k * p), nrow = k)
 X <- matrix(c(rep(1, n[1]), rep(0, sum(n)), rep(1, n[2]), rep(0, sum(n)), rep(1, n[3])),
-           ncol = k, nrow = sum(n))
+  ncol = k, nrow = sum(n)
+)
 y <- (-2 * sqrt(1 - rho) + sqrt(4 * (1 - rho) + 4 * p * rho)) / (2 * p)
 x <- y + sqrt((1 - rho))
 Gamma <- matrix(rep(y, p * p), nrow = p)
@@ -63,3 +64,4 @@ glht_zzz2022(Y, X, C)
 \references{
 \insertRef{Zhu_2023}{NRAHDLTP}
 }
+\concept{nraglht}

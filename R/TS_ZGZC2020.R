@@ -48,6 +48,8 @@
 #' y2 <- Gamma %*% Z2 + mu2 %*% (rep(1, n2))
 #' ts_zgzc2020(y1, y2)
 
+#'
+#' @concept nrats
 #' @export
 ts_zgzc2020 <- function(y1, y2) {
   if (nrow(y1) != nrow(y2)) {

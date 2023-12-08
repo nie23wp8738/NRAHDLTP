@@ -49,6 +49,7 @@
 
 #' ts_bs1996(y1, y2)
 #'
+#' @concept ts
 #' @export
 
 ts_bs1996 <- function(y1, y2) {

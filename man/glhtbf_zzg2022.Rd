@@ -65,7 +65,9 @@ for (g in 1:k) {
 }
 G <- cbind(diag(k - 1), rep(-1, k - 1))
 glhtbf_zzg2022(Y, G, n, p)
+
 }
 \references{
 \insertRef{zhang2022linear}{NRAHDLTP}
 }
+\concept{nraglht}

@@ -51,7 +51,9 @@ Z2 <- matrix(rnorm(n2 * p, mean = 0, sd = 1), p, n2)
 y1 <- Gamma \%*\% Z1 + mu1 \%*\% (rep(1, n1))
 y2 <- Gamma \%*\% Z2 + mu2 \%*\% (rep(1, n2))
 ts_zzz2020(y1, y2)
+
 }
 \references{
 \insertRef{Zhang_2020}{NRAHDLTP}
 }
+\concept{nrats}

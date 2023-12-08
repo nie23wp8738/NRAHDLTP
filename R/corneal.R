@@ -16,6 +16,7 @@
 #' }
 #' @references Smaga, Ł., & Zhang, J. T. (2019). Linear hypothesis testing with functional data. Technometrics, 61(1), 99-110.
 
+#' @concept data
 #' @examples
 #' library(NRAHDLTP)
 #' data(corneal)

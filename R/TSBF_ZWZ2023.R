@@ -56,6 +56,8 @@
 #' y2 <- Gamma2 %*% Z2 + mu2%*%(rep(1,n2))
 #' tsbf_zwz2023(y1, y2)
 
+#'
+#' @concept nrats
 #' @export
 tsbf_zwz2023 <- function(y1, y2) {
   if (nrow(y1) != nrow(y2)) {

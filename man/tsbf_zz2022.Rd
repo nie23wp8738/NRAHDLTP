@@ -61,7 +61,9 @@ Z2 <- matrix(rnorm(n2 * p, mean = 0, sd = 1), p, n2)
 y1 <- Gamma1 \%*\% Z1 + mu1 \%*\% (rep(1, n1))
 y2 <- Gamma2 \%*\% Z2 + mu2 \%*\% (rep(1, n2))
 tsbf_zz2022(y1, y2)
+
 }
 \references{
 \insertRef{zhang2022further}{NRAHDLTP}
 }
+\concept{nrats}

@@ -55,6 +55,7 @@
 #' glht_fhw2004(Y,X,C)
 
 
+#' @concept glht
 #' @export
 glht_fhw2004 <- function(Y, X, C) {
   stats <- glht_fhw2004_cpp(Y, X, C)

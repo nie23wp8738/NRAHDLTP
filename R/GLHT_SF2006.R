@@ -54,6 +54,7 @@
 #' glht_sf2006(Y,X,C)
 #'
 #'
+#' @concept glht
 #' @export
 glht_sf2006 <- function(Y, X, C) {
   stat <- glht_sf2006_cpp(Y, X, C)

@@ -62,3 +62,4 @@ glht_sf2006(Y,X,C)
 \references{
 \insertRef{srivastava2006multivariate}{NRAHDLTP}
 }
+\concept{glht}

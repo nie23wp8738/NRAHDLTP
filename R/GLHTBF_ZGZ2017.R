@@ -59,6 +59,8 @@
 #' }
 #' G <- cbind(diag(k - 1), rep(-1, k - 1))
 #' glhtbf_zgz2017(Y, G, n, p)
+#'
+#' @concept glht
 #' @export
 #
 glhtbf_zgz2017 <- function(Y, G, n, p) {

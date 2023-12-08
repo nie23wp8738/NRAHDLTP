@@ -19,8 +19,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml) 
-[![Codecov test coverage](https://codecov.io/gh/nie23wp8738/NRAHDLTP/branch/main/graph/badge.svg)](https://app.codecov.io/gh/nie23wp8738/NRAHDLTP?branch=main)
+[![R-CMD-check](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml) [![Codecov test coverage](https://codecov.io/gh/nie23wp8738/NRAHDLTP/branch/main/graph/badge.svg)](https://app.codecov.io/gh/nie23wp8738/NRAHDLTP?branch=main)
 
 <!-- badges: end -->
 
@@ -37,7 +36,7 @@ install.packages("NRAHDLTP")
 Or install the development version of NRAHDLTP from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
+install.packages("devtools")
 devtools::install_github("nie23wp8738/NRAHDLTP")
 ```
 
@@ -50,10 +49,7 @@ library(NRAHDLTP)
 ## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
-```{r cars}
-summary(cars)
-```
+## Code of Conduct
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+Please note that the NRAHDLTP project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.

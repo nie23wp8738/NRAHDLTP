@@ -57,6 +57,7 @@
 #' tsbf_skk2013(y1, y2)
 #'
 #'
+#' @concept ts
 #' @export
 tsbf_skk2013 <- function(y1, y2) {
   if (nrow(y1) != nrow(y2)) {

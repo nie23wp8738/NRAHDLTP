@@ -65,7 +65,9 @@ for (g in 1:k) {
 }
 G <- cbind(diag(k - 1), rep(-1, k - 1))
 glhtbf_zgz2017(Y, G, n, p)
+
 }
 \references{
 \insertRef{zhou2017high}{NRAHDLTP}
 }
+\concept{glht}

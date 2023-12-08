@@ -55,6 +55,8 @@
 #' }
 #' G <- cbind(diag(k - 1), rep(-1, k - 1))
 #' glhtbf_zzg2022(Y, G, n, p)
+#'
+#' @concept nraglht
 #' @export
 glhtbf_zzg2022 <- function(Y, G, n, p) {
   stats <- glhtbf_zzg2022_cpp(Y, G, n, p)

@@ -54,6 +54,7 @@
 #' C <- cbind(diag(q),-rep(1,q))
 #' glht_ys2012(Y,X,C)
 #'
+#' @concept glht
 #' @export
 glht_ys2012 <- function(Y, X, C) {
   stats <- glht_ys2012_cpp(Y, X, C)

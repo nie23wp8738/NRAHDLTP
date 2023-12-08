@@ -55,6 +55,7 @@
 #' tsbf_cq2010(y1, y2)
 #'
 #'
+#' @concept ts
 #' @export
 
 tsbf_cq2010 <- function(y1, y2) {

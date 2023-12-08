@@ -57,6 +57,7 @@
 #' G <- cbind(diag(k - 1), rep(-1, k - 1))
 #' glht_zgz2017(Y, G, n, p)
 
+#' @concept nraglht
 #' @export
 #
 

@@ -62,3 +62,4 @@ tsbf_cq2010(y1, y2)
 \references{
 \insertRef{Chen_2010}{NRAHDLTP}
 }
+\concept{ts}

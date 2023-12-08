@@ -14,6 +14,7 @@
 #' }
 #' @references Thair SA, He YD, Hasin-Brumshtein Y, Sakaram S et al. Transcriptomic similarities and differences in host response between SARS-CoV-2 and other viral infections. iScience 2021 Jan 22;24(1):101947. PMID: 33437935
 
+#' @concept data
 #' @examples
 #' library(NRAHDLTP)
 #' data(COVID19)

@@ -61,3 +61,4 @@ glht_ys2012(Y,X,C)
 \references{
 \insertRef{yamada2012test}{NRAHDLTP}
 }
+\concept{glht}

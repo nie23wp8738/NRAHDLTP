@@ -1,4 +1,38 @@
 url: ~
+
+destination: docs
 template:
   bootstrap: 5
 
+home:
+  strip_header: false
+
+navbar:
+  title: "T4cluster"
+  left:
+    - text: "Functions"
+      href: reference/index.html
+    - text: "News"
+      href: news/index.html
+  right:
+    - icon: fa-github
+      href: https://github.com/nie23wp8738/NRAHDLTP
+    - icon: fa-envelope
+      href: nie23.wp8738@e.ntu.edu.sg
+
+reference:
+  - title: "[0] Data Sets"
+    contents:
+      - has_concept("data")
+  - title: "[1] Normal-refernece Approach Based Tests for Two-sample Problem"
+    contents:
+      - has_concept("nrats")
+  - title: "[2] Normal-refernece Approach Based Tests for GLHT Problem"
+    contents:
+      - has_concept("nraglht")
+  - title: "[3] The Others' Tests for Two-sample Problem"
+    contents:
+      - has_concept("ts")
+  - title: "[4] The Others' Tests for GLHT Problem"
+    contents:
+      - has_concept("glht")

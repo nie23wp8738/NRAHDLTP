@@ -61,3 +61,4 @@ glht_fhw2004(Y,X,C)
 \references{
 \insertRef{fujikoshi_2004_asymptotic}{NRAHDLTP}
 }
+\concept{glht}

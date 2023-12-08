@@ -54,7 +54,9 @@ for (g in 1:k) {
   Y[[g]] <- Gamma \%*\% Z + t(t(M[g, ])) \%*\% (rep(1, n[g]))
 }
 ks_s2007(Y, n, p)
+
 }
 \references{
 \insertRef{schott2007some}{NRAHDLTP}
 }
+\concept{glht}

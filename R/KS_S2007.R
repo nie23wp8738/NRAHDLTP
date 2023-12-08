@@ -47,6 +47,8 @@
 #'   Y[[g]] <- Gamma %*% Z + t(t(M[g, ])) %*% (rep(1, n[g]))
 #' }
 #' ks_s2007(Y, n, p)
+#'
+#' @concept glht
 #' @export
 ks_s2007 <- function(Y, n, p) {
   stats <- ks_s2007_cpp(Y, n, p)

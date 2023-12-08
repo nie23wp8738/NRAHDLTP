@@ -47,6 +47,7 @@
 #' y2 <- Gamma %*% Z2 + mu2 %*% (rep(1, n2))
 #' ts_sd2008(y1, y2)
 #'
+#' @concept ts
 #' @export
 ts_sd2008 <- function(y1, y2) {
   if (nrow(y1) != nrow(y2)) {

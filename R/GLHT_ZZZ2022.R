@@ -54,6 +54,7 @@
 #' C <- cbind(diag(q), -rep(1, q))
 #' glht_zzz2022(Y, X, C)
 #'
+#' @concept nraglht
 #' @export
 glht_zzz2022 <- function(Y, X, C) {
   stats <- glht_zzz2022_cpp(Y, X, C)

@@ -46,6 +46,8 @@
 #' y1 <- Gamma %*% Z1 + mu1 %*% (rep(1, n1))
 #' y2 <- Gamma %*% Z2 + mu2 %*% (rep(1, n2))
 #' ts_zz2022(y1, y2)
+#'
+#' @concept nrats
 #' @export
 ts_zz2022 <- function(y1, y2) {
   if (nrow(y1) != nrow(y2)) {
