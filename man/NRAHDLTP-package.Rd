@@ -12,6 +12,7 @@ We provide a collection of various classical tests and latest normal-reference a
 Useful links:
 \itemize{
   \item \url{https://nie23wp8738.github.io/NRAHDLTP/}
+  \item \url{https://cran.r-project.org/web/packages/NRAHDLTP/index.html}
   \item Report bugs at \url{https://github.com/nie23wp8738/NRAHDLTP/issues}
 }
 

@@ -22,8 +22,7 @@ navbar:
 
 reference:
   - title: "[0] Data Sets"
-    contents:
-      - has_concept("data")
+    contents:     - has_concept("data")
   - title: "[1] Normal-refernece Approach Based Tests for Two-sample Problem"
     contents:
       - has_concept("nrats")
