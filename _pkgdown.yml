@@ -10,15 +10,13 @@ home:
 navbar:
   title: "T4cluster"
   left:
-    - text: "Functions"
+    - text: "Reference"
       href: reference/index.html
     - text: "News"
       href: news/index.html
   right:
     - icon: fa-github
       href: https://github.com/nie23wp8738/NRAHDLTP
-    - icon: fa-envelope
-      href: nie23.wp8738@e.ntu.edu.sg
 
 reference:
   - title: "[0] Data Sets"

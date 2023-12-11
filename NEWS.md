@@ -1,5 +1,6 @@
 # NRAHDLTP 0.1.3
--   Update website.
+-   Update version.
+-   Build a site for this package.
 
 # NRAHDLTP 0.1.2
 

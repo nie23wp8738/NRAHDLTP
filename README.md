@@ -9,9 +9,6 @@
 [![](https://www.r-pkg.org/badges/last-release/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP)
 [![R-CMD-check](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml)
-[![Codecov test
-coverage](https://codecov.io/gh/nie23wp8738/NRAHDLTP/branch/main/graph/badge.svg)](https://app.codecov.io/gh/nie23wp8738/NRAHDLTP?branch=main)
-[![R-CMD-check](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml)
 
 <!-- badges: end -->
 
