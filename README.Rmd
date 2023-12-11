@@ -17,8 +17,8 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
-[![](https://www.r-pkg.org/badges/version/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP) [![](https://www.r-pkg.org/badges/last-release/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP) [![](https://cranlogs.r-pkg.org/badges/grand-total/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP) [![R-CMD-check](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml)
-
+[![](https://www.r-pkg.org/badges/version/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP) [![](https://www.r-pkg.org/badges/last-release/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP) [![](https://cranlogs.r-pkg.org/badges/grand-total/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP) 
+[![R-CMD-check](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The R package **NRAHDLTP** includes the latest methods based on normal-reference approach to test the equality of the mean vectors of high-dimensional samples with possibly different covariance matrices. And `NRAHDLTP` is also used to demonstrate the implementation of these tests, catering not only to the two-sample problem, but also to the general linear hypothesis testing (GLHT) problem. This package provides easy and user-friendly access to these tests. Both coded in C++ to allow for reasonable execution time using [Rcpp](https://github.com/RcppCore/Rcpp). And except for [Rcpp](https://github.com/RcppCore/Rcpp), the package has no strict dependencies in order to provide a stable self-contained toolbox that invites re-use.

@@ -9,7 +9,6 @@
 [![](https://www.r-pkg.org/badges/last-release/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP)
 [![R-CMD-check](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml)
-
 <!-- badges: end -->
 
 The R package **NRAHDLTP** includes the latest methods based on
