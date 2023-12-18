@@ -5,9 +5,6 @@
 
 <!-- badges: start -->
 
-[![](https://www.r-pkg.org/badges/version/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP)
-[![](https://www.r-pkg.org/badges/last-release/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP)
-[![](https://cranlogs.r-pkg.org/badges/grand-total/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP)
 [![R-CMD-check](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -29,7 +26,8 @@ There are two real data sets in `NRAHDLTP`:
 and
 [corneal](https://nie23wp8738.github.io/NRAHDLTP/reference/corneal.html).
 
-Seven normal-refernece Approach Based Tests for Two-sample Problem:
+Seven normal-refernece Approach based tests for Two-sample Problem in
+`NRAHDLTP`:
 [ts_zgzc2020()](https://nie23wp8738.github.io/NRAHDLTP/reference/ts_zgzc2020.html),
 [ts_zz2022()](https://nie23wp8738.github.io/NRAHDLTP/reference/ts_zz2022.html),
 [ts_zzz2020()](https://nie23wp8738.github.io/NRAHDLTP/reference/ts_zzz2020.html),
@@ -38,7 +36,7 @@ Seven normal-refernece Approach Based Tests for Two-sample Problem:
 [tsbf_zzgz2021()](https://nie23wp8738.github.io/NRAHDLTP/reference/tsbf_zzgz2021.html),
 [tsbf_zzz2023()](https://nie23wp8738.github.io/NRAHDLTP/reference/tsbf_zzz2023.html).
 
-Five normal-refernece Approach Based Tests for GLHT Problem in
+Five normal-refernece Approach based tests for GLHT Problem in
 `NRAHDLTP`:
 [glht_zgz2017()](https://nie23wp8738.github.io/NRAHDLTP/reference/glht_zgz2017.html),
 [glht_zz2022()](https://nie23wp8738.github.io/NRAHDLTP/reference/glht_zz2022.html),
@@ -46,13 +44,13 @@ Five normal-refernece Approach Based Tests for GLHT Problem in
 [glhtbf_zz2022()](https://nie23wp8738.github.io/NRAHDLTP/reference/glhtbf_zz2022.html),
 [glhtbf_zzg2022()](https://nie23wp8738.github.io/NRAHDLTP/reference/glhtbf_zzg2022.html).
 
-Four of the others’ Tests for Two-sample Problem in `NRAHDLTP`:
+Four of the others’ tests for Two-sample Problem in `NRAHDLTP`:
 [ts_bs1996()](https://nie23wp8738.github.io/NRAHDLTP/reference/ts_bs1996.html),
 [ts_sd2008()](https://nie23wp8738.github.io/NRAHDLTP/reference/ts_sd2008.html),
 [tsbf_cq2010()](https://nie23wp8738.github.io/NRAHDLTP/reference/tsbf_cq2010.html),
 [tsbf_skk2013()](https://nie23wp8738.github.io/NRAHDLTP/reference/tsbf_skk2013.html).
 
-Five of the others’ test for GLHT problem in `NRAHDLTP`:
+Five of the others’ tests for GLHT problem in `NRAHDLTP`:
 [glht_fhw2004()](https://nie23wp8738.github.io/NRAHDLTP/reference/glht_fhw2004.html),
 [glht_sf2006()](https://nie23wp8738.github.io/NRAHDLTP/reference/glht_sf2006.html),
 [glht_ys2012()](https://nie23wp8738.github.io/NRAHDLTP/reference/glht_ys2012.html),
@@ -61,18 +59,7 @@ Five of the others’ test for GLHT problem in `NRAHDLTP`:
 
 ## Installation
 
-You can install and load the most recent approved version from
-[CRAN](https://cran.r-project.org/web/packages/NRAHDLTP/index.html)
-with:
-
-``` r
-# install the most recent approved version from CRAN
-install.packages("NRAHDLTP")
-# load the most recent approved version from CRAN
-library(NRAHDLTP)
-```
-
-Or You can install and load the most recent development version of
+You can install and load the most recent development version of
 `NRAHDLTP` from [GitHub](https://github.com/) with:
 
 ``` r

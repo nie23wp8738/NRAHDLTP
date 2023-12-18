@@ -1,6 +1,6 @@
-# Version 0.1.2
+# Version 0.1.3
 
-Re-submitting after adding references describing the methods in our package in the description field and Adding a REFERENCES.bib in 'inst' folder and modified the reference format in each '.R' file.
+Re-submitting after building a website.
 
 ## Test environments
 
@@ -11,7 +11,7 @@ Re-submitting after adding references describing the methods in our package in t
 
 ## R CMD check results
 
-I think this package was archived because a re-submission was submitted with the same release (0.1.2) as the release that I was trying to correct (0.1.1). This submission (0.1.2) attempts to correct this in line with CRAN policy (<https://cran.r-project.org/web/packages/policies.html>).
+I think this package was archived because a re-submission was submitted with the same release (0.1.3) as the release that I was trying to add one website (0.1.2). This submission (0.1.3) attempts to correct this in line with CRAN policy (<https://cran.r-project.org/web/packages/policies.html>).
 
 0 errors ✔ \| 0 warnings ✔ \| 5 notes ✖
 
@@ -22,7 +22,9 @@ The main notes are as following:
 ```         
 Maintainer: ‘Pengfei Wang <nie23.wp8738@e.ntu.edu.sg>’
 
-New submission
+Days since last update: 5
+  
+Package has a VignetteBuilder field but no prebuilt vignette index.
 ```
 
 2 \* checking installed package size ... NOTE
@@ -68,6 +70,6 @@ There are currently no downstream dependencies for this package.
 
 ------------------------------------------------------------------------
 
-This version fixes and catches for failing tests,some spelling corrections and some formatting corrections.
+This version fixes and catches for builiding one website.
 
 Thanks! Pengfei Wang

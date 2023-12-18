@@ -39,7 +39,7 @@ Let  \eqn{\bar{\boldsymbol{y}}_{i},i=1,\ldots,k} be the sample mean vectors and 
 
 Zhou et al. (2017) proposed the following U-statistic based test statistic:
 \deqn{
-T_{ZGZ}=\|\boldsymbol{C \hat{\mu}}\|^2-\sum_{i=1}^kh_{ii}\operatorname{tr}(\hat{\boldsymbol{\Sigma}}_i)/n_i,
+T_{ZGZ}=\|\boldsymbol{C \hat{\mu}}\|^2-\sum_{i=1}^k_h{ii}\operatorname{tr}(\hat{\boldsymbol{\Sigma}}_i)/n_i,
 }
 where \eqn{\boldsymbol{C}=[(\boldsymbol{G D G}^\top)^{-1/2}\boldsymbol{G}]\otimes\boldsymbol{I}_p}, \eqn{\boldsymbol{D}=\operatorname{diag}(1/n_1,\ldots,1/n_k)}, and \eqn{h_{ij}} is the \eqn{(i,j)}th entry of the \eqn{k\times k} matrix \eqn{\boldsymbol{H}=\boldsymbol{G}^\top\boldsymbol{G}}.
 

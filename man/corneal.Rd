@@ -36,7 +36,7 @@ group4 <- as.matrix(corneal[79:150, ])
 dim(group4)
 }
 \references{
-Smaga, Ł., & Zhang, J. T. (2019). Linear hypothesis testing with functional data. Technometrics, 61(1), 99-110.
+\insertRef{smaga2019linear}{NRAHDLTP}
 }
 \concept{data}
 \keyword{datasets}

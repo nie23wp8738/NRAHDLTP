@@ -16,8 +16,6 @@ knitr::opts_chunk$set(
 # NRAHDLTP
 
 <!-- badges: start -->
-
-[![](https://www.r-pkg.org/badges/version/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP) [![](https://www.r-pkg.org/badges/last-release/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP) [![](https://cranlogs.r-pkg.org/badges/grand-total/NRAHDLTP)](https://cran.r-project.org/package=NRAHDLTP) 
 [![R-CMD-check](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nie23wp8738/NRAHDLTP/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -35,16 +33,7 @@ Five of the others' test for GLHT problem in `NRAHDLTP`: [glht_fhw2004()](https:
 
 ## Installation
 
-You can install and load the most recent approved version from [CRAN](https://cran.r-project.org/web/packages/NRAHDLTP/index.html) with:
-
-``` r
-# install the most recent approved version from CRAN
-install.packages("NRAHDLTP")
-# load the most recent approved version from CRAN
-library(NRAHDLTP)
-```
-
-Or You can install and load the most recent development version of `NRAHDLTP` from [GitHub](https://github.com/) with:
+You can install and load the most recent development version of `NRAHDLTP` from [GitHub](https://github.com/) with:
 
 ``` r
 # Installing from GitHub requires you first install the devtools or remotes package

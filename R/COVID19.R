@@ -12,7 +12,8 @@
 #' \item{healthy group1}{row 2 to row 19, and row 82 to 87, in total 24 healthy controls}
 #' \item{patients group2}{row 20 to 81, in total 62 prospectively enrolled patients}
 #' }
-#' @references Thair SA, He YD, Hasin-Brumshtein Y, Sakaram S et al. Transcriptomic similarities and differences in host response between SARS-CoV-2 and other viral infections. iScience 2021 Jan 22;24(1):101947. PMID: 33437935
+#' @references
+#' \insertRef{thair2021transcriptomic}{NRAHDLTP}
 
 #' @concept data
 #' @examples

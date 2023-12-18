@@ -30,7 +30,7 @@ group2 <- as.matrix(COVID19[-c(1:19, 82:87), ])
 dim(group2)
 }
 \references{
-Thair SA, He YD, Hasin-Brumshtein Y, Sakaram S et al. Transcriptomic similarities and differences in host response between SARS-CoV-2 and other viral infections. iScience 2021 Jan 22;24(1):101947. PMID: 33437935
+\insertRef{thair2021transcriptomic}{NRAHDLTP}
 }
 \concept{data}
 \keyword{datasets}

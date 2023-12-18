@@ -14,7 +14,8 @@
 #' \item{suspect map group3}{row 58 to row 78 in total 21 of the feature matrix correspond to observations from the suspect map group}
 #' \item{ clinical keratoconus group4}{row 79 to row 150 in total 72 of the feature matrix correspond to observations from the clinical keratoconus group}
 #' }
-#' @references Smaga, Ł., & Zhang, J. T. (2019). Linear hypothesis testing with functional data. Technometrics, 61(1), 99-110.
+#' @references
+#' \insertRef{smaga2019linear}{NRAHDLTP}
 
 #' @concept data
 #' @examples
