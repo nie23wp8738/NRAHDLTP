@@ -365,7 +365,7 @@ arma::vec tsbf_zwz2023_cpp(const arma::mat & y1, const arma::mat & y2)
 //Two-sample scale-invariant tests
 // Test proposed by Srivastava and Du (2008)
 // [[Rcpp::export]]
-double ts_sd2008_cpp(const arma::mat & y1, const arma::mat & y2)
+arma::vec ts_sd2008_cpp(const arma::mat & y1, const arma::mat & y2)
 {
   int n1 = y1.n_cols;
   int n2 = y2.n_cols;
@@ -390,13 +390,24 @@ double ts_sd2008_cpp(const arma::mat & y1, const arma::mat & y2)
   double Tnp=double(n1*n2)/(n1+n2)*arma::dot(meandiff,meandiff)/p;
   x.each_col()/=sqrtdiagSvec;
   arma::mat R;
-  double trR2;  //  R=(x*x.t())/n;//tr(Sigmahat)  if(n1<p || n2<p){    R=(x.t()*x)/n;//tr(Sigmahat)    trR2=arma::accu(R%R);    }else{    R=(x*x.t())/n;    trR2=arma::accu(R%R);}
+  double trR2;
+  //  R=(x*x.t())/n;//tr(Sigmahat)
+  if(n1<p || n2<p){
+    R=(x.t()*x)/n;//tr(Sigmahat)
+    trR2=arma::accu(R%R);
+    }else{
+    R=(x*x.t())/n;
+    trR2=arma::accu(R%R);
+}
 
   //double trR2=arma::accu(R%R);
   double cpn=1+trR2/pow(sqrt(p),3);
 
   double TSD = (p*Tnp-n*p/(n-2))/sqrt(2*(trR2-p*p/n)*cpn);
-  return TSD;
+  arma::vec values(2);
+  values(0) = TSD;
+  values(1) = cpn;
+  return values;
 }
 
 // Test proposed by Srivastava et al.(2013)
@@ -487,7 +498,15 @@ arma::vec ts_zzz2020_cpp(const arma::mat & y1, const arma::mat & y2)
   double Tnp=double(n1*n2)/(n1+n2)*arma::dot(meandiff,meandiff)/p;
   x.each_col()/=sqrtdiagSvec;
   arma::mat R;
-  // R=(x*x.t())/n;//tr(Sigmahat)  double trR2;  if(n1<p || n2<p){   R=(x.t()*x)/n;//tr(Sigmahat)   trR2=arma::accu(R%R);  }else{   R=(x*x.t())/n;   trR2=arma::accu(R%R);  }
+  // R=(x*x.t())/n;//tr(Sigmahat)
+  double trR2;
+  if(n1<p || n2<p){
+   R=(x.t()*x)/n;//tr(Sigmahat)
+   trR2=arma::accu(R%R);
+  }else{
+   R=(x*x.t())/n;
+   trR2=arma::accu(R%R);
+  }
 
   //double trR2=arma::accu(R%R);
   double trR2hat = pow(n,2)*(trR2-pow(trace(R),2)/n)/(n1+n2)/(n-1);

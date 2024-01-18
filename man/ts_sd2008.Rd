@@ -16,6 +16,7 @@ A  (list) object of  \code{S3} class \code{htest}  containing the following elem
 \describe{
 \item{statistic}{the test statistic proposed by Srivastava and Du (2008).}
 \item{p.value}{the \eqn{p}-value of the test proposed by Srivastava and Du (2008).}
+\item{cpn}{the adjustment coefficient proposed by Srivastava and Du (2008).}
 }
 }
 \description{

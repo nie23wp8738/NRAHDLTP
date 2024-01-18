@@ -96,7 +96,7 @@ BEGIN_RCPP
 END_RCPP
 }
 // ts_sd2008_cpp
-double ts_sd2008_cpp(const arma::mat& y1, const arma::mat& y2);
+arma::vec ts_sd2008_cpp(const arma::mat& y1, const arma::mat& y2);
 RcppExport SEXP _NRAHDLTP_ts_sd2008_cpp(SEXP y1SEXP, SEXP y2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;

@@ -27,6 +27,7 @@
 #' \describe{
 #' \item{statistic}{the test statistic proposed by Srivastava and Du (2008).}
 #' \item{p.value}{the \eqn{p}-value of the test proposed by Srivastava and Du (2008).}
+#' \item{cpn}{the adjustment coefficient proposed by Srivastava and Du (2008).}
 #' }
 #'
 #' @examples
@@ -53,11 +54,14 @@ ts_sd2008 <- function(y1, y2) {
   if (nrow(y1) != nrow(y2)) {
     stop("y1 and y2 must have same dimension!")
   } else {
-    stat <- ts_sd2008_cpp(y1, y2)
+    stats <- ts_sd2008_cpp(y1, y2)
+    stat <- stats[1]
+    cpn <- stats[2]
     pvalue <- pnorm(stat, 0, 1, lower.tail = FALSE, log.p = FALSE)
   }
   names(stat) <- "statistic"
-  res <- list(statistic = stat, p.value = pvalue)
+  names(cpn) <- "cpn"
+  res <- list(statistic = stat, p.value = pvalue, parameters = cpn)
   class(res) <- "htest"
   return(res)
 }
