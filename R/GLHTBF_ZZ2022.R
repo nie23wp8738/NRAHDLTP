@@ -75,7 +75,7 @@ glhtbf_zz2022 <- function(Y, G, n, p) {
   names(df) <- "df"
   names(beta1) <- "beta1"
   names(beta0) <- "beta0"
-  res <- list(statistic = stat, p.value = pvalue, parameter = c(df, beta1, beta0))
+  res <- list(statistic = stat, p.value = pvalue, parameter = c(df, beta0, beta1))
   class(res) <- "htest"
   return(res)
 }

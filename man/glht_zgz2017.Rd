@@ -19,7 +19,8 @@ glht_zgz2017(Y,G,n,p)
 A  (list) object of  \code{S3} class \code{htest}  containing the following elements:
 \describe{
 \item{statistic}{the test statistic proposed by  Zhang et al. (2017)}
-\item{p.value}{the \eqn{p}-value of the test proposed by  Zhang et al. (2017).}
+\item{p.value}{the \eqn{p}-value of the test proposed by Zhang et al. (2017).}
+\item{beta}{the parameters used in Zhang et al. (2017)'s test.}
 \item{df}{estimated approximate degrees of freedom of Zhang et al.(2017)'s test.}
 
 }

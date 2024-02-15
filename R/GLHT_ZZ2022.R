@@ -73,7 +73,7 @@ glht_zz2022 <- function(Y, G, n, p) {
   names(beta0) <- "beta0"
   names(beta1) <- "beta1"
   names(df) <- "df"
-  res <- list(statistic = stat, p.value = pvalue, parameters = c(df, beta1, beta0))
+  res <- list(statistic = stat, p.value = pvalue, parameters = c(df, beta0, beta1))
   class(res) <- "htest"
   return(res)
 }

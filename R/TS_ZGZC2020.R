@@ -67,7 +67,7 @@ ts_zgzc2020 <- function(y1, y2) {
   names(stat) <- "statistic"
   names(beta) <- "beta"
   names(df) <- "df"
-  res <- list(statistic = stat, p.value = pvalue, parameters = c(beta, df))
+  res <- list(statistic = stat, p.value = pvalue, parameters = c(df, beta))
   class(res) <- "htest"
   return(res)
 }

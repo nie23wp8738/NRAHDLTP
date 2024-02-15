@@ -17,8 +17,8 @@
 #' \deqn{H_0: \boldsymbol{C\Theta}=\boldsymbol{0}, \quad \text { vs. } \quad H_1: \boldsymbol{C\Theta} \neq \boldsymbol{0}.}
 #'
 #' Srivastava and Fujikoshi (2006) proposed the following test statistic:
-#' \deqn{T_{SF}=\left[2q\hat{a}_2(1+n^{-1}q)\right]^{-1/2}\left[\frac{\operatorname{tr}(\boldsymbol{B})}{\sqrt{p}}-\frac{q}{\sqrt{n}}\frac{\operatorname{tr}(\boldsymbol{W})}{\sqrt{np}}\right].}
-#' where \eqn{\boldsymbol{W}} and \eqn{\boldsymbol{B}} are the matrix of sum of squares and products due to error and the error, respectively, and \eqn{\hat{a}_2=[\operatorname{tr}(\boldsymbol{W}^2)-\operatorname{tr}^2(\boldsymbol{W})/n]/[(n-1)(n+2)p]}.
+#' \deqn{T_{SF}=\left[2q\hat{a}_2(1+(n-k)^{-1}q)\right]^{-1/2}\left[\frac{\operatorname{tr}(\boldsymbol{B})}{\sqrt{p}}-\frac{q}{\sqrt{n-k}}\frac{\operatorname{tr}(\boldsymbol{W})}{\sqrt{(n-k)p}}\right].}
+#' where \eqn{\boldsymbol{W}} and \eqn{\boldsymbol{B}} are the matrix of sum of squares and products due to error and the error, respectively, and \eqn{\hat{a}_2=[\operatorname{tr}(\boldsymbol{W}^2)-\operatorname{tr}^2(\boldsymbol{W})/(n-k)]/[(n-k-1)(n-k+2)p]}.
 #' They showed that under the null hypothesis, \eqn{T_{SF}} is asymptotically normally distributed.
 
 #' @references
